@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Landscape 2026 — The Definitive Editorial Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700;800;900&family=Public+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --wsj-black: #1a1a1a;
+  --wsj-blue: #003366;
+  --wsj-gray-dark: #333333;
+  --wsj-gray-med: #666666;
+  --wsj-gray-light: #f4f4f4;
+  --wsj-border: #d2d2d2;
+  --white: #ffffff;
+  --cream: #f9f7f2;
+  
+  --font-serif: 'Libre Baskerville', serif;
+  --font-display: 'Playfair Display', serif;
+  --font-sans: 'Public Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--white);
+  color: var(--wsj-black);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4 { font-family: var(--font-display); color: var(--wsj-black); }
+p { margin-bottom: 1.25rem; color: var(--wsj-gray-dark); font-size: 1rem; }
+
+/* LAYOUT */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 40px; position: relative; }
+
+/* HEADER & NAV */
+nav {
+  background: var(--white);
+  border-bottom: 2px solid var(--wsj-black);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 900;
+  text-decoration: none;
+  color: var(--wsj-black);
+  letter-spacing: -0.04em;
+  margin-bottom: 12px;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 10px 0;
+  border-top: 1px solid var(--wsj-border);
+  width: 100%;
+  justify-content: center;
+}
+.nav-links a {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--wsj-gray-med);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--wsj-blue); }
+
+/* TICKER */
+.ticker-wrap {
+  border-bottom: 1px solid var(--wsj-border);
+  padding: 8px 0;
+  background: var(--wsj-black);
+  color: var(--white);
+  overflow: hidden;
+}
+.ticker { display: flex; gap: 60px; animation: ticker 45s linear infinite; white-space: nowrap; }
+.ticker-item { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.05em; text-transform: uppercase; }
+.ticker-item span { font-weight: 700; color: var(--wsj-border); }
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* HERO */
+.hero {
+  padding: 100px 0 80px;
+  text-align: center;
+  background-color: var(--cream);
+  border-bottom: 1px solid var(--wsj-border);
+}
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--wsj-blue);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.hero-title {
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  line-height: 1.0;
+  margin-bottom: 30px;
+  letter-spacing: -0.02em;
+}
+.hero-title .accent { color: var(--wsj-blue); font-style: italic; }
+.hero-desc {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  max-width: 900px;
+  margin: 0 auto 50px;
+  color: var(--wsj-gray-dark);
+}
+.hero-meta {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  border-top: 1px solid var(--wsj-border);
+  padding-top: 40px;
+}
+.meta-item { display: flex; flex-direction: column; gap: 4px; }
+.meta-label { font-family: var(--font-mono); font-size: 0.7rem; color: var(--wsj-gray-med); text-transform: uppercase; }
+.meta-value { font-family: var(--font-sans); font-size: 1.4rem; font-weight: 800; }
+
+/* SECTION COMMON */
+section { padding: 100px 0; border-bottom: 1px solid var(--wsj-border); }
+section:nth-of-type(even) { background-color: var(--wsj-gray-light); }
+.section-header { margin-bottom: 60px; border-bottom: 4px solid var(--wsj-black); padding-bottom: 20px; }
+.section-tag { font-family: var(--font-mono); color: var(--wsj-blue); font-size: 0.8rem; text-transform: uppercase; margin-bottom: 10px; display: block; font-weight: 700; }
+.section-title { font-size: 3.5rem; font-weight: 900; line-height: 1.1; margin-bottom: 15px; }
+.section-sub { font-family: var(--font-serif); font-size: 1.2rem; color: var(--wsj-gray-med); max-width: 800px; }
+
+/* EDITORIAL CARDS */
+.card-grid { display: grid; gap: 30px; }
+.card-grid-2 { grid-template-columns: 1fr 1fr; }
+.card-grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--wsj-border);
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.card:hover { border-color: var(--wsj-black); }
+.card-label { font-family: var(--font-mono); font-size: 0.65rem; text-transform: uppercase; color: var(--wsj-blue); margin-bottom: 15px; font-weight: 700; border-bottom: 1px solid var(--wsj-border); padding-bottom: 5px; }
+.card-title { font-size: 1.8rem; margin-bottom: 15px; line-height: 1.2; }
+.card-body { font-size: 0.95rem; line-height: 1.6; color: var(--wsj-gray-dark); margin-bottom: 20px; flex-grow: 1; }
+
+.chips-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { 
+  font-family: var(--font-mono); 
+  font-size: 0.65rem; 
+  padding: 4px 10px; 
+  border: 1px solid var(--wsj-black); 
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* WIDE CARD */
+.wide-card {
+  background: var(--white);
+  border: 1px solid var(--wsj-border);
+  padding: 45px;
+  margin-bottom: 30px;
+}
+.wide-card-title { font-size: 2rem; margin-bottom: 15px; }
+
+/* TABLES - WSJ STYLE */
+.table-wrap { width: 100%; overflow-x: auto; margin: 50px 0; }
+.editorial-table { width: 100%; border-collapse: collapse; text-align: left; border-top: 3px solid var(--wsj-black); }
+.editorial-table th { padding: 15px 20px; border-bottom: 1px solid var(--wsj-black); font-family: var(--font-sans); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--wsj-gray-med); font-weight: 800; }
+.editorial-table td { padding: 25px 20px; border-bottom: 1px solid var(--wsj-border); vertical-align: top; }
+.editorial-table td:first-child { font-weight: 800; font-family: var(--font-sans); width: 25%; font-size: 1.1rem; }
+.editorial-table td:nth-child(2) { font-family: var(--font-mono); font-size: 0.85rem; color: var(--wsj-blue); line-height: 1.8; }
+
+/* TOOLS LIST */
+.tools-list { display: grid; gap: 20px; }
+.tool-item {
+  display: flex; gap: 25px; padding: 25px; border-bottom: 1px solid var(--wsj-border);
+  background: var(--white);
+}
+.tool-icon { font-size: 1.8rem; flex-shrink: 0; }
+.tool-name { font-weight: 800; font-family: var(--font-sans); font-size: 1.15rem; margin-bottom: 5px; }
+.tool-desc { font-size: 0.9rem; color: var(--wsj-gray-med); }
+
+/* STACK SECTION */
+.stack-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; }
+.stack-card { border: 1px solid var(--wsj-border); padding: 35px; background: var(--cream); position: relative; }
+.stack-card::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: var(--wsj-black); }
+.stack-card-title { font-size: 1.5rem; margin-bottom: 20px; border-bottom: 1px solid var(--wsj-black); padding-bottom: 10px; }
+.stack-table { width: 100%; border-collapse: collapse; }
+.stack-table td { padding: 10px 0; font-size: 0.9rem; border-bottom: 1px dotted var(--wsj-border); }
+.stack-table td:last-child { text-align: right; font-weight: 800; color: var(--wsj-blue); }
+.stack-summary { font-family: var(--font-serif); font-style: italic; font-size: 0.9rem; margin-top: 20px; color: var(--wsj-gray-dark); border-top: 1px solid var(--wsj-border); padding-top: 15px; }
+
+/* BENCHMARK VISUAL */
+.bench-box { margin: 30px 0; }
+.bench-row { margin-bottom: 25px; }
+.bench-label { display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.75rem; margin-bottom: 10px; font-weight: 600; }
+.bench-track { height: 10px; background: #e0e0e0; }
+.bench-fill { height: 100%; background: var(--wsj-blue); transition: width 1.5s ease-in-out; }
+
+/* NOTE BOX */
+.note-box {
+  background: #fff;
+  border: 1px solid var(--wsj-border);
+  border-left: 6px solid var(--wsj-blue);
+  padding: 30px;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  margin: 40px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+.note-box strong { color: var(--wsj-blue); }
+
+/* FOOTER */
+footer {
+  background: var(--wsj-black);
+  color: var(--white);
+  padding: 100px 0;
+}
+.footer-inner { display: flex; justify-content: space-between; align-items: flex-end; }
+.footer-logo { font-family: var(--font-display); font-size: 2.5rem; font-weight: 900; letter-spacing: -0.04em; }
+.footer-info { font-family: var(--font-mono); font-size: 0.75rem; text-align: right; opacity: 0.7; line-height: 2; }
+
+@media (max-width: 1000px) {
+  .card-grid-2, .card-grid-3, .stack-grid { grid-template-columns: 1fr; }
+  .nav-links { flex-wrap: wrap; justify-content: center; font-size: 0.65rem; }
+  .hero-meta { flex-direction: column; gap: 30px; align-items: center; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">THE AI LANDSCAPE</a>
+    <ul class="nav-links">
+      <li><a href="#students">Students</a></li>
+      <li><a href="#engineering">Engineering</a></li>
+      <li><a href="#software">Software</a></li>
+      <li><a href="#business">Business</a></li>
+      <li><a href="#marketing">Marketing</a></li>
+      <li><a href="#sales">Sales</a></li>
+      <li><a href="#finance">Finance</a></li>
+      <li><a href="#design">Design</a></li>
+      <li><a href="#tools">Tool Stack</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="ticker-wrap">
+  <div class="ticker">
+    <div class="ticker-item">Gemini 3.1 Pro <span>→ FEB 19</span></div>
+    <div class="ticker-item">GPT-5.4 Pro <span>→ MAR 5</span></div>
+    <div class="ticker-item">Claude Opus 4.7 <span>→ APR 16</span></div>
+    <div class="ticker-item">Llama 4 Scout <span>→ 10M CONTEXT</span></div>
+    <div class="ticker-item">MiniMax M2.5 <span>→ 80.2% FEB PEAK</span></div>
+    <div class="ticker-item">Llama 4 Maverick <span>→ REASONING POWER</span></div>
+    <!-- Loop Clones -->
+    <div class="ticker-item">Gemini 3.1 Pro <span>→ FEB 19</span></div>
+    <div class="ticker-item">GPT-5.4 Pro <span>→ MAR 5</span></div>
+    <div class="ticker-item">Claude Opus 4.7 <span>→ APR 16</span></div>
+    <div class="ticker-item">Llama 4 Scout <span>→ 10M CONTEXT</span></div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="container">
+    <div class="hero-eyebrow">April 2026 Special Report</div>
+    <h1 class="hero-title">
+      Every AI Model<br>
+      Worth Using<br>
+      <span class="accent">Right Now.</span>
+    </h1>
+    <p class="hero-desc">The definitive field-specific breakdown of foundation models, specialist tools, and winning AI stacks. A cross-disciplinary analysis for a rapidly evolving digital world.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Total Coverage</span>
+        <span class="meta-value">12+ Flagships</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Core Disciplines</span>
+        <span class="meta-value">8 Fields</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Last Updated</span>
+        <span class="meta-value">April 30, 2026</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- SECTION 0: FOUNDATION -->
+<section id="foundation">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Analysis: Core Systems</span>
+      <h2 class="section-title">Flagship <em>Foundation Models</em></h2>
+      <p class="section-sub">The reasoning engines defining the competitive landscape in early 2026.</p>
+    </div>
+
+    <div class="card-grid card-grid-2">
+      <article class="card">
+        <div class="card-label">Google DeepMind · Released Feb 19, 2026</div>
+        <h3 class="card-title">Gemini 3.1 Pro</h3>
+        <p class="card-body">Google's flagship reasoning model featuring a 1M token context window with exceptional performance on long‑text analysis and exam‑style reasoning tasks. Deeply integrated with Google Workspace and India's education ecosystem.</p>
+        <div class="chips-row">
+          <span class="chip">1M Context</span>
+          <span class="chip">Workspace Native</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-label">OpenAI · Released Mar 5, 2026</div>
+        <h3 class="card-title">GPT-5.4 Pro</h3>
+        <p class="card-body">Current OpenAI flagship with 1M context, "extreme" thinking mode, and top‑tier scores on coding and general-reasoning benchmarks. Best for high‑volume ad copy, email sequences, and complex reasoning tasks. Features computer‑use APIs.</p>
+        <div class="chips-row">
+          <span class="chip">Extreme Thinking</span>
+          <span class="chip">Computer APIs</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-label">Anthropic · Released Apr 16, 2026</div>
+        <h3 class="card-title">Claude Opus 4.7</h3>
+        <p class="card-body">Anthropic's latest Opus model, succeeding Opus 4.6. Improves on software-engineering and long-running tasks. Currently the strongest commercially available Opus, with gains in safety-aligned reasoning and instruction adherence.</p>
+        <div class="chips-row">
+          <span class="chip">SWE-Bench Leader</span>
+          <span class="chip">Safety Aligned</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-label">Perplexity AI · Teams Edition</div>
+        <h3 class="card-title">Perplexity AI</h3>
+        <p class="card-body">The standard for research-heavy, citation-linked queries and literature-style Q&A. Uniquely positioned for internal knowledge-base Q&A across organizations needing live, sourced answers.</p>
+        <div class="chips-row">
+          <span class="chip">Citation-Linked</span>
+          <span class="chip">Live Search</span>
+        </div>
+      </article>
+    </div>
+
+    <div class="note-box">
+      <strong>Meta Llama 4 Family (LlamaCon 2026):</strong> 
+      Released as open-weight powerhouses. <strong>Llama 4 Scout</strong> offers a 10M token context window for massive technical document pass-throughs. <strong>Llama 4 Maverick</strong> is a parallel "reasoning powerhouse" optimized for heavy mathematical and domain-specific reasoning tasks with zero API cost.
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 1: STUDENTS -->
+<section id="students">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Section 01</span>
+      <h2 class="section-title">Students & <em>Education</em></h2>
+      <p class="section-sub">The optimal academic AI stack for learners across every discipline.</p>
+    </div>
+
+    <div class="wide-card">
+      <h3 class="wide-card-title">Top Academic Models</h3>
+      <div class="card-grid card-grid-2">
+        <div>
+          <h4 style="margin-bottom:10px;">Gemini 3.1 Pro</h4>
+          <p style="font-size:0.9rem;">Ideal for long-text summaries, PDF-based study notes, and exam-style Q&A across India's education ecosystem. Deeply integrated with Google Classroom.</p>
+        </div>
+        <div>
+          <h4 style="margin-bottom:10px;">GPT-5.4 Pro</h4>
+          <p style="font-size:0.9rem;">Top choice for writing help, coding practice, and concept explanations. "Extreme" thinking mode enables step-by-step walkthroughs.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin-bottom:20px; font-size:1.4rem;">Practical Tools for Students</h3>
+    <div class="tools-list">
+      <div class="tool-item">
+        <span class="tool-icon">🎓</span>
+        <div>
+          <p class="tool-name">Gemini in Workspace</p>
+          <p class="tool-desc">Summary and study note automation for Classroom users.</p>
+        </div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">💬</span>
+        <div>
+          <p class="tool-name">ChatGPT (GPT-5.4 Pro)</p>
+          <p class="tool-desc">Top-tier academic writing help and concept explanations.</p>
+        </div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">🧠</span>
+        <div>
+          <p class="tool-name">Claude Opus 4.7</p>
+          <p class="tool-desc">Strong for research-paper digestion and complex reasoning (Law, MBA, Engineering).</p>
+        </div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">🔢</span>
+        <div>
+          <p class="tool-name">WolframAlpha / Engine</p>
+          <p class="tool-desc">Irreplaceable for math, physics, and symbolic computation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2: ENGINEERING -->
+<section id="engineering">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Section 02</span>
+      <h2 class="section-title">Engineering <em>Workflows</em></h2>
+      <p class="section-sub">Technical analysis, CAD/FEA/CFD, and technical documentation.</p>
+    </div>
+
+    <div class="card-grid card-grid-3">
+      <div class="card">
+        <h4 class="card-title" style="font-size:1.4rem;">Gemini 3.1 Pro</h4>
+        <p class="card-body">Strong on technical reading and long-context documentation. 1M context handles entire engineering specs in one pass.</p>
+      </div>
+      <div class="card">
+        <h4 class="card-title" style="font-size:1.4rem;">Claude Opus 4.7</h4>
+        <p class="card-body">Best publicly available Opus for engineering-style reasoning and technical compliance tasks.</p>
+      </div>
+      <div class="card">
+        <h4 class="card-title" style="font-size:1.4rem;">Llama 4 Scout</h4>
+        <p class="card-body">Meta's 10M context variant. Handles entire test suites and simulation logs in a single pass.</p>
+      </div>
+    </div>
+
+    <h3 style="margin:40px 0 20px; font-size:1.4rem;">Specialist Engineering Tools</h3>
+    <div class="tools-list">
+      <div class="tool-item">
+        <span class="tool-icon">💻</span>
+        <div><p class="tool-name">GitHub Copilot + Cursor</p><p class="tool-desc">Best-in-class for electronics, embedded firmware, and simulation scripting.</p></div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">🔬</span>
+        <div><p class="tool-name">Ansys AI / SimAI / Discovery</p><p class="tool-desc">AI-accelerated simulation (CFD, FEA, Thermal) inside Ansys workflows.</p></div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">☁️</span>
+        <div><p class="tool-name">SimScale</p><p class="tool-desc">Cloud-based CFD/FEA with AI-driven optimization and design-space exploration.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: SOFTWARE -->
+<section id="software">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Section 03</span>
+      <h2 class="section-title">Software <em>Development</em></h2>
+      <p class="section-sub">SWE-bench context and the April 2026 leaderboard.</p>
+    </div>
+
+    <div class="wide-card">
+      <h3 class="wide-card-title">Live SWE-bench Benchmark Standings</h3>
+      <div class="bench-box">
+        <div class="bench-row">
+          <div class="bench-label"><span>MiniMax M2.5 — Current April</span><span>75.8%</span></div>
+          <div class="bench-track"><div class="bench-fill" style="width:75.8%;"></div></div>
+        </div>
+        <div class="bench-row">
+          <div class="bench-label"><span>Claude Opus 4.6 — Current April</span><span>75.6%</span></div>
+          <div class="bench-track"><div class="bench-fill" style="width:75.6%;"></div></div>
+        </div>
+        <div class="bench-row">
+          <div class="bench-label"><span>MiniMax M2.5 — February Peak</span><span>80.2%</span></div>
+          <div class="bench-track"><div class="bench-fill" style="width:80.2%;"></div></div>
+        </div>
+      </div>
+      <p class="card-body" style="font-family:var(--font-serif); border-top:1px solid var(--wsj-border); padding-top:20px;">
+        <strong>Note on MiniMax M2.5:</strong> Scored 80.2% on SWE-bench Verified in February — competitive with Claude Opus 4.6. Notable for its 230B parameters and <strong>10–20× lower cost</strong> than proprietary models.
+      </p>
+    </div>
+
+    <div class="card-grid card-grid-2">
+      <div class="card">
+        <h4 class="card-title">Claude Opus 4.7</h4>
+        <p class="card-body">The standard for SWE-style work. Improves on software engineering and instruction adherence over the 4.6 version.</p>
+      </div>
+      <div class="card">
+        <h4 class="card-title">GLM-5 & Qwen 3-Coder-Next</h4>
+        <p class="card-body">Leading open-source families. Sit in the mid-40% range on SWE-bench; good for lightweight tasks and prototyping.</p>
+      </div>
+    </div>
+
+    <div class="tools-list" style="margin-top:30px;">
+      <div class="tool-item">
+        <span class="tool-icon">⚡</span>
+        <div><p class="tool-name">Cursor AI</p><p class="tool-desc">IDE-style AI with access to GPT-5.4, Claude 4.7, and Gemini-class models.</p></div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">🐙</span>
+        <div><p class="tool-name">GitHub Copilot</p><p class="tool-desc">The standard for intellisense completion and small-function generation.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: BUSINESS -->
+<section id="business">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Section 04</span>
+      <h2 class="section-title">General Business & <em>Org-Wide AI</em></h2>
+      <p class="section-sub">Enterprise deployment strategies for flagship models.</p>
+    </div>
+
+    <div class="card-grid card-grid-3">
+      <div class="card">
+        <div class="card-label">OpenAI · MAR 5, 2026</div>
+        <h4 class="card-title">GPT-5.4 Pro</h4>
+        <p class="card-body">Best for high-volume content and org-wide deployment via Microsoft ecosystem. Includes advanced computer-use APIs.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Google · FEB 19, 2026</div>
+        <h4 class="card-title">Gemini 3.1 Pro</h4>
+        <p class="card-body">The logical choice for organizations standardized on Google Workspace. 1M context supports massive document workflows.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Anthropic · APR 16, 2026</div>
+        <h4 class="card-title">Claude Opus 4.7</h4>
+        <p class="card-body">The choice for complex compliance and reasoning requirements where safety-alignment is paramount.</p>
+      </div>
+    </div>
+
+    <div class="tools-list" style="margin-top:40px;">
+      <div class="tool-item">
+        <span class="tool-icon">📊</span>
+        <div><p class="tool-name">M365 Copilot (Agent Mode)</p><p class="tool-desc">For finance, HR, and ops teams inside Excel, Word, and Teams.</p></div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">🔍</span>
+        <div><p class="tool-name">Perplexity for Teams</p><p class="tool-desc">For internal research and knowledge-base Q&A.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: MARKETING & SALES -->
+<section id="marketing">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Section 05 & 06</span>
+      <h2 class="section-title">Marketing & <em>Sales Intelligence</em></h2>
+      <p class="section-sub">Drive growth with brand consistency and outreach automation.</p>
+    </div>
+
+    <div class="card-grid card-grid-2">
+      <div class="wide-card">
+        <h3 style="margin-bottom:20px;">Marketing Leaders</h3>
+        <p><strong>Claude Opus 4.7:</strong> Strong for long-form copy, brand-voice consistency, and multi-channel campaign planning.</p>
+        <p><strong>Gemini 3.1 Pro:</strong> Strong for search- and SEO-style content and analytics-driven messaging.</p>
+        <p><strong>GPT-5.4 Pro:</strong> Best for high-volume ad copy, email sequences, and social media content.</p>
+        
+        <div class="tools-list" style="margin-top:20px;">
+          <div class="tool-item"><span>🚀</span><div><p class="tool-name">HubSpot Marketing Hub</p><p class="tool-desc">End-to-end campaigns, email, landing pages, and analytics.</p></div></div>
+          <div class="tool-item"><span>📧</span><div><p class="tool-name">Mailchimp</p><p class="tool-desc">Accessible email-marketing automation.</p></div></div>
+        </div>
+      </div>
+
+      <div class="wide-card">
+        <h3 style="margin-bottom:20px;">Sales Stack</h3>
+        <p><strong>Claude Opus 4.7:</strong> Best for personalized outreach drafts, objection handling, and deal-strategy notes.</p>
+        <p><strong>Gemini 3.1 Pro:</strong> Strong for CRM-linked research and ABM messaging.</p>
+
+        <div class="tools-list" style="margin-top:20px;">
+          <div class="tool-item"><span>🏆</span><div><p class="tool-name">Salesforce + Einstein</p><p class="tool-desc">Predictive lead-scoring and CRM-native AI.</p></div></div>
+          <div class="tool-item"><span>🎙️</span><div><p class="tool-name">Gong</p><p class="tool-desc">Conversation intelligence for call analysis and coaching.</p></div></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="note-box">
+      <strong>Customer Engagement:</strong> Drift / HubSpot AI Customer Agents are the leading choices for lead-qualification and chat-bot flows in 2026.
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7: FINANCE -->
+<section id="finance">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Section 07</span>
+      <h2 class="section-title">Finance & <em>FP&A</em></h2>
+      <p class="section-sub">Specialist AI for financial modeling and investment-banking workflows.</p>
+    </div>
+
+    <div class="card-grid card-grid-3">
+      <div class="card">
+        <h4 class="card-title">Shortcut</h4>
+        <p class="card-body">Specialized AI modeling assistant. Best for 3-statement Excel models and IB workflows.</p>
+      </div>
+      <div class="card">
+        <h4 class="card-title">Claude 4.x (4.7)</h4>
+        <p class="card-body">Strong for modeling, forecasting, and accounting-logic inside Excel-connected tools.</p>
+      </div>
+      <div class="card">
+        <h4 class="card-title">GPT-5.4 / Gemini 3.1</h4>
+        <p class="card-body">Ideal for high-level analysis, business-case writing, and report drafting.</p>
+      </div>
+    </div>
+
+    <h3 style="margin:40px 0 20px; font-size:1.4rem;">Specialist Finance Platforms</h3>
+    <div class="card-grid card-grid-2">
+      <div class="tool-item"><span>💰</span><div><p class="tool-name">Shortcut</p><p class="tool-desc">The industry's best dedicated AI modeling tool for finance teams.</p></div></div>
+      <div class="tool-item"><span>Anaplan / Cube</span><div><p class="tool-name">Enterprise FP&A</p><p class="tool-desc">Audit-automation platforms with AI-driven anomaly detection.</p></div></div>
+      <div class="tool-item"><span>📡</span><div><p class="tool-name">Portfolio Tools</p><p class="tool-desc">Kavout, CloudEagle, and Terminal-X for pricing-benchmarking and portfolio analysis.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 8: DESIGN -->
+<section id="design">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Section 08</span>
+      <h2 class="section-title">Design & <em>UI/UX</em></h2>
+      <p class="section-sub">Rapid ideation and brand asset creation.</p>
+    </div>
+
+    <div class="card-grid card-grid-2">
+      <article class="card">
+        <h4 class="card-title">Claude Design</h4>
+        <p class="card-body">Claude 4-design-optimized. Best-in-class AI design partner for rapid ideation and presentation-style decks.</p>
+      </article>
+      <article class="card">
+        <h4 class="card-title">Figma AI / Figma Make</h4>
+        <p class="card-body">Native AI inside Figma for design-system-aware prototyping and interactive prototyping from natural language.</p>
+      </article>
+      <article class="card">
+        <h4 class="card-title">Gemini Vision / Google Stitch</h4>
+        <p class="card-body">For UI-generation and visual experimentation within Google's ecosystem.</p>
+      </article>
+      <article class="card">
+        <h4 class="card-title">Image Generation</h4>
+        <p class="card-body">Midjourney v7, DALL·E-3-class, and Imagen 3 for high-fidelity marketing visuals and brand assets.</p>
+      </article>
+    </div>
+
+    <div class="note-box">
+      <strong>Pro Tip:</strong> The <strong>Claude + Figma MCP</strong> flow is the strongest AI-powered design assistant setup for product teams in 2026.
+    </div>
+  </div>
+</section>
+
+<!-- MASTER REFERENCE TABLE -->
+<section id="quickref">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Master <em>Reference</em> Table</h2>
+      <p class="section-sub">The April 2026 definitive cross-comparison.</p>
+    </div>
+    
+    <div class="table-wrap">
+      <table class="editorial-table">
+        <thead>
+          <tr>
+            <th>Field</th>
+            <th>Best Model(s)</th>
+            <th>Performance & Timing Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Students</td><td>Gemini 3.1 Pro, GPT-5.4 Pro, Claude Opus 4.7</td><td>Gemini 3.1 Pro: Feb 19, 2026; GPT-5.4: March 5, 2026; Opus 4.7: April 16, 2026.</td></tr>
+          <tr><td>Engineering</td><td>Gemini 3.1 Pro, Claude Opus 4.7, Llama 4 Scout & Maverick</td><td>Llama 4 Scout: 10M token context; Maverick: reasoning-focused; both released April 2026.</td></tr>
+          <tr><td>Software</td><td>Claude Opus 4.7, Gemini 3.1 Pro, MiniMax M2.5, GLM-5/Qwen-3-Coder-Next</td><td>MiniMax M2.5: up to 80.2% on Verified (Feb) and 75.8% on April leaderboards; strong for cost-efficiency.</td></tr>
+          <tr><td>Business</td><td>GPT-5.4 Pro, Gemini 3.1 Pro, Claude Opus 4.7</td><td>All three publicly released between Feb and April 2026.</td></tr>
+          <tr><td>Marketing</td><td>Claude Opus 4.7, Gemini 3.1 Pro, GPT-5.4 Pro</td><td>Emphasis on long-form copy, SEO, and multi-channel planning.</td></tr>
+          <tr><td>Sales</td><td>Claude Opus 4.7, Gemini 3.1 Pro</td><td>Strong for personalized outreach and CRM-linked research.</td></tr>
+          <tr><td>Finance</td><td>Shortcut (specialist), Claude Opus 4.7 in Excel, GPT-5.4/Gemini 3.1 Pro</td><td>Shortcut best for embedded Excel modeling; models used for analysis and reports.</td></tr>
+          <tr><td>Design</td><td>Claude Design, Gemini Vision/Stitch, Figma AI/Make</td><td>Claude-and-Figma-integrated flows are strongest for product teams.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTIVITY TOOLS -->
+<section id="tools">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Tool Stack</span>
+      <h2 class="section-title">Presentations, Sheets & <em>Docs</em></h2>
+    </div>
+
+    <div class="stack-grid">
+      <!-- PRESENTATIONS -->
+      <div class="stack-card">
+        <h3 class="stack-card-title">Presentations</h3>
+        <table class="stack-table">
+          <tr><td>Fast General</td><td>Gamma</td></tr>
+          <tr><td>Design-Heavy</td><td>Canva</td></tr>
+          <tr><td>Storytelling</td><td>Prezent</td></tr>
+          <tr><td>Structured</td><td>Beautiful.ai</td></tr>
+          <tr><td>Sales Decks</td><td>Pitch</td></tr>
+        </table>
+        <p class="stack-summary">Sai Kiran's Pick: <strong>Prezent</strong> for executive communication and narrative frameworks.</p>
+      </div>
+
+      <!-- SHEETS -->
+      <div class="stack-card">
+        <h3 class="stack-card-title">Spreadsheets</h3>
+        <table class="stack-table">
+          <tr><td>General Auto</td><td>GPT for Work</td></tr>
+          <tr><td>MS-First</td><td>MS Copilot</td></tr>
+          <tr><td>Fin-Modeling</td><td>Shortcut AI</td></tr>
+          <tr><td>Reasoning</td><td>Claude for Excel</td></tr>
+          <tr><td>Google Sheets</td><td>Arcwise</td></tr>
+        </table>
+        <p class="stack-summary">Sai Kiran's Pick: <strong>GPT for Work</strong> for sheet-aware actions and bulk processing.</p>
+      </div>
+
+      <!-- DOCUMENTS -->
+      <div class="stack-card">
+        <h3 class="stack-card-title">Documents</h3>
+        <table class="stack-table">
+          <tr><td>Research</td><td>Liner Write</td></tr>
+          <tr><td>Drafting</td><td>ChatGPT</td></tr>
+          <tr><td>Knowledge</td><td>Notion AI</td></tr>
+          <tr><td>Editing</td><td>Grammarly</td></tr>
+          <tr><td>Executive</td><td>Manus AI</td></tr>
+        </table>
+        <p class="stack-summary">Sai Kiran's Pick: <strong>Liner Write</strong> for research-backed reports with verified citations.</p>
+      </div>
+    </div>
+
+    <!-- FINAL SUMMARY STACK BY OUTPUT -->
+    <div class="note-box" style="margin-top:60px;">
+      <h3 style="font-size:1.4rem; margin-bottom:15px;">Final Recommendation: Stack by Output</h3>
+      <p>• <strong>If your goal is slides:</strong> Safest picks are <strong>Gamma</strong> for speed, <strong>Canva</strong> for design teams, and <strong>Prezent</strong> for enterprise communication.</p>
+      <p>• <strong>If your goal is spreadsheets:</strong> Start with <strong>GPT for Work</strong> unless deeply tied to M365, in which case <strong>Copilot</strong> is the natural choice.</p>
+      <p>• <strong>If your goal is documents:</strong> Use <strong>Liner Write</strong> when citations matter, <strong>ChatGPT</strong> for drafting, and <strong>Notion AI</strong> for internal knowledge systems.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">THE AI LANDSCAPE</div>
+      <div class="footer-info">
+        <div>UPDATED APRIL 30, 2026</div>
+        <div>DATA SOURCE: PUBLIC MODEL RELEASES & BENCHMARK LEADERBOARDS</div>
+        <div>© 2026 MONTHLY REPORT. SAI SRIKIRAN J.</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Ticker clone for loop
+const ticker = document.querySelector('.ticker');
+ticker.innerHTML += ticker.innerHTML;
+
+// Simple Benchmark Animation
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.querySelectorAll('.bench-fill').forEach(bar => {
+        bar.style.width = bar.parentElement.previousElementSibling.querySelector('span:last-child').innerText;
+      });
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.bench-box').forEach(box => observer.observe(box));
+</script>
+
+</body>
+</html>
