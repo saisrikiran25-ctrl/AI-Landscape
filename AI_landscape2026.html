@@ -981,82 +981,715 @@ footer {
 </section>
 
 <!-- SECTION 4: BUSINESS -->
+<!-- SECTION 4: BUSINESS -->
 <section id="business">
   <div class="container">
     <div class="section-header">
-      <span class="section-tag">Section 04</span>
+      <span class="section-tag">Section 04 · April 2026</span>
       <h2 class="section-title">General Business & <em>Org-Wide AI</em></h2>
-      <p class="section-sub">Enterprise deployment strategies for flagship models.</p>
+      <p class="section-sub">Enterprise deployment strategies — from agentic AI platforms to org-wide productivity and build-vs-buy decisions.</p>
     </div>
 
-    <div class="card-grid card-grid-3">
-      <div class="card">
-        <div class="card-label">OpenAI · MAR 5, 2026</div>
-        <h4 class="card-title">GPT-5.4 Pro</h4>
-        <p class="card-body">Best for high-volume content and org-wide deployment via Microsoft ecosystem. Includes advanced computer-use APIs.</p>
+    <!-- 4.1 The Shift to Agentic AI -->
+    <h3 style="font-size:1.6rem; margin-bottom:20px; border-bottom:2px solid var(--wsj-border); padding-bottom:10px;">4.1 The Shift to Agentic AI in Enterprises</h3>
+    <p style="font-family:var(--font-serif); margin-bottom:20px; color:var(--wsj-gray-dark);">The defining trend in enterprise AI for 2026 is the shift from single-turn chatbots to <strong>agentic AI</strong> — systems that can plan, take actions across multiple tools and APIs, execute multi-step workflows autonomously, and escalate to humans only when truly needed.</p>
+    <div class="note-box">
+      <strong>Why agentic AI changes the ROI math:</strong> An AI that simply answers questions saves minutes. An AI agent that runs an accounts-payable reconciliation, drafts a board report, or triages a CRM pipeline end-to-end saves <em>hours or days per week</em>. The major platforms competing for the enterprise AI budget in 2026 are <strong>Microsoft 365 Copilot (Agent Mode)</strong>, <strong>Google Gemini Enterprise</strong>, and <strong>Salesforce Agentforce</strong>, with AWS Bedrock and IBM Watsonx serving more technical, custom-deployment teams.
+    </div>
+
+    <!-- 4.2 Platform Comparison -->
+    <h3 style="font-size:1.6rem; margin:50px 0 20px; border-bottom:2px solid var(--wsj-border); padding-bottom:10px;">4.2 Platform-Level Comparison: Microsoft vs Google vs Salesforce</h3>
+
+    <div class="table-wrap">
+      <table class="editorial-table">
+        <thead>
+          <tr>
+            <th>Platform</th>
+            <th>Core Model / Ecosystem</th>
+            <th>Context Window &amp; Agentic Capability</th>
+            <th>Best For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Microsoft 365 Copilot (Agent Mode)</td>
+            <td>GPT-5.4-class via Azure OpenAI · ~$30/user/month</td>
+            <td>1M token context; Copilot Studio for custom agents; Model Context Protocol connectors</td>
+            <td>Teams running on Office 365 — Excel, Word, Teams, Outlook, SharePoint</td>
+          </tr>
+          <tr>
+            <td>Google Gemini Enterprise</td>
+            <td>Gemini 3.1 Pro · Custom enterprise pricing; announced April 22, 2026 at Google Cloud Next</td>
+            <td>2M+ token context; long-running agents in cloud sandboxes; Vertex AI agent builder</td>
+            <td>Google Workspace users — Docs, Sheets, Slides, Drive, Gmail; multimodal workflows</td>
+          </tr>
+          <tr>
+            <td>Salesforce Agentforce (Einstein GPT)</td>
+            <td>Salesforce-tuned LLMs + OpenAI integration · Salesforce add-on pricing</td>
+            <td>Salesforce record context; Agentforce 360 custom agent framework; 24/7 customer and sales agents</td>
+            <td>CRM-native orgs; sales, service, and marketing automation inside Salesforce</td>
+          </tr>
+          <tr>
+            <td>AWS Bedrock</td>
+            <td>Multi-model (Claude, Titan, Llama 4, Mistral) · Usage-based pricing</td>
+            <td>Varies by model; native agent orchestration, tool use, knowledge grounding</td>
+            <td>Engineering/infra teams building RAG apps, knowledge agents, and custom LLM stacks</td>
+          </tr>
+          <tr>
+            <td>IBM Watsonx.ai</td>
+            <td>IBM Granite + open-source LLMs · Enterprise licensing</td>
+            <td>Enterprise-grade; MLOps pipelines with AI governance; on-premise options</td>
+            <td>Regulated industries needing governance, audit trails — finance, healthcare, government</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note-box">
+      <strong>Key insight:</strong> <strong>Microsoft Copilot</strong> wins on existing Microsoft-ecosystem fit. <strong>Google Gemini Enterprise</strong> wins on long-context multimodal tasks and Google Workspace depth. <strong>Salesforce Agentforce</strong> wins when CRM is the primary system of record.
+    </div>
+
+    <!-- 4.3 Key Use Cases -->
+    <h3 style="font-size:1.6rem; margin:50px 0 20px; border-bottom:2px solid var(--wsj-border); padding-bottom:10px;">4.3 Key Org-Wide AI Use Cases &amp; Best Tools</h3>
+
+    <h4 style="font-size:1.1rem; margin-bottom:15px; color:var(--wsj-blue); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.05em;">Operations &amp; Workflow Automation</h4>
+    <div class="tools-list" style="margin-bottom:40px;">
+      <div class="tool-item">
+        <span class="tool-icon">🤖</span>
+        <div>
+          <p class="tool-name">UiPath (RPA + AI)</p>
+          <p class="tool-desc">Robotic Process Automation combined with AI; automates data entry, invoice processing, report generation, and system updates. A documented case shows reducing a 40-hour/week AP workflow to 2 hours of oversight after automation.</p>
+        </div>
       </div>
-      <div class="card">
-        <div class="card-label">Google · FEB 19, 2026</div>
-        <h4 class="card-title">Gemini 3.1 Pro</h4>
-        <p class="card-body">The logical choice for organizations standardized on Google Workspace. 1M context supports massive document workflows.</p>
+      <div class="tool-item">
+        <span class="tool-icon">⚡</span>
+        <div>
+          <p class="tool-name">Zapier AI</p>
+          <p class="tool-desc">Best no-code workflow automation tool connecting hundreds of SaaS apps with AI-driven multi-step triggers and logic. Ideal for operations and RevOps teams without engineering resources.</p>
+        </div>
       </div>
-      <div class="card">
-        <div class="card-label">Anthropic · APR 16, 2026</div>
-        <h4 class="card-title">Claude Opus 4.7</h4>
-        <p class="card-body">The choice for complex compliance and reasoning requirements where safety-alignment is paramount.</p>
+      <div class="tool-item">
+        <span class="tool-icon">🧑‍💼</span>
+        <div>
+          <p class="tool-name">Lindy AI</p>
+          <p class="tool-desc">AI executive assistant for founders and operations teams; handles calls, routes leads, books meetings, and manages support emails 24/7 without human oversight.</p>
+        </div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">🔗</span>
+        <div>
+          <p class="tool-name">Microsoft Power Automate + Copilot</p>
+          <p class="tool-desc">For Microsoft-first organizations: AI-assisted workflow creation across 365 apps including SharePoint, Dynamics, and Azure. Native to M365 enterprise licensing.</p>
+        </div>
       </div>
     </div>
 
-    <div class="tools-list" style="margin-top:40px;">
+    <h4 style="font-size:1.1rem; margin-bottom:15px; color:var(--wsj-blue); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.05em;">Meetings, Communication &amp; Productivity</h4>
+    <div class="tools-list" style="margin-bottom:40px;">
+      <div class="tool-item">
+        <span class="tool-icon">🎙️</span>
+        <div>
+          <p class="tool-name">Fireflies.ai</p>
+          <p class="tool-desc">Best AI for meeting transcription, auto-generated summaries, and action-item tracking; integrates with Zoom, Teams, and Google Meet. Widely used for post-call CRM updates.</p>
+        </div>
+      </div>
       <div class="tool-item">
         <span class="tool-icon">📊</span>
-        <div><p class="tool-name">M365 Copilot (Agent Mode)</p><p class="tool-desc">For finance, HR, and ops teams inside Excel, Word, and Teams.</p></div>
+        <div>
+          <p class="tool-name">Read.ai</p>
+          <p class="tool-desc">Cross-platform meeting intelligence across Zoom, Teams, and Slack; tracks engagement metrics and generates meeting reports. Good for organizations wanting analytics on meeting quality and participation.</p>
+        </div>
       </div>
       <div class="tool-item">
-        <span class="tool-icon">🔍</span>
-        <div><p class="tool-name">Perplexity for Teams</p><p class="tool-desc">For internal research and knowledge-base Q&A.</p></div>
+        <span class="tool-icon">📅</span>
+        <div>
+          <p class="tool-name">Nyota</p>
+          <p class="tool-desc">Meeting automation tool with smart agendas, summaries, and automatic CRM updates post-call. Best for sales and client-success teams who need zero-effort post-meeting logging.</p>
+        </div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">📝</span>
+        <div>
+          <p class="tool-name">Otter.ai</p>
+          <p class="tool-desc">Widely used for live transcription and collaborative meeting notes. Strong for hybrid teams that need a shared, searchable record of all meetings.</p>
+        </div>
       </div>
     </div>
+
+    <h4 style="font-size:1.1rem; margin-bottom:15px; color:var(--wsj-blue); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.05em;">Analytics &amp; Business Intelligence</h4>
+    <div class="tools-list" style="margin-bottom:40px;">
+      <div class="tool-item">
+        <span class="tool-icon">🔍</span>
+        <div>
+          <p class="tool-name">ThoughtSpot</p>
+          <p class="tool-desc">AI-driven analytics with natural-language querying; lets non-technical business users ask data questions in plain English and get chart-backed answers — no SQL required.</p>
+        </div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">📈</span>
+        <div>
+          <p class="tool-name">Tableau + Einstein AI</p>
+          <p class="tool-desc">Now integrates Salesforce Einstein for natural-language data exploration inside Tableau dashboards. Best for organizations already on Salesforce and Tableau.</p>
+        </div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">📉</span>
+        <div>
+          <p class="tool-name">Microsoft Copilot in Power BI</p>
+          <p class="tool-desc">Generates charts, summaries, and DAX measures from natural-language prompts inside Power BI. The natural choice for M365-standardized organizations.</p>
+        </div>
+      </div>
+    </div>
+
+    <h4 style="font-size:1.1rem; margin-bottom:15px; color:var(--wsj-blue); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.05em;">HR, Legal &amp; Internal Knowledge</h4>
+    <div class="tools-list" style="margin-bottom:40px;">
+      <div class="tool-item">
+        <span class="tool-icon">🗂️</span>
+        <div>
+          <p class="tool-name">Notion AI</p>
+          <p class="tool-desc">Internal documentation, company wiki, project management, and cross-team knowledge search. One of the most commonly deployed org-wide AI layers in 2026 — especially for startups and mid-market companies.</p>
+        </div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">✅</span>
+        <div>
+          <p class="tool-name">ClickUp Brain</p>
+          <p class="tool-desc">Task management and project planning with AI; auto-generates project briefs, stand-up summaries, and progress updates. Strong for project-delivery teams managing multiple concurrent workstreams.</p>
+        </div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">🏢</span>
+        <div>
+          <p class="tool-name">Wizr AI</p>
+          <p class="tool-desc">Enterprise AI platform that deploys function-specific agents — ticket triage, document automation, policy lookup, workflow orchestration — inside existing enterprise systems. SOC 2 Type II and ISO 27001 certified for regulated deployments.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4.4 Build vs Buy -->
+    <h3 style="font-size:1.6rem; margin:50px 0 20px; border-bottom:2px solid var(--wsj-border); padding-bottom:10px;">4.4 Build vs Buy: Foundation Models in Business Workflows</h3>
+    <p style="font-family:var(--font-serif); margin-bottom:30px; color:var(--wsj-gray-dark);">Larger organizations are increasingly using foundation models directly via API to build custom internal tools rather than relying on off-the-shelf platforms.</p>
+    <div class="card-grid card-grid-2">
+      <div class="card">
+        <div class="card-label">Microsoft Azure · Enterprise SLAs</div>
+        <h4 class="card-title" style="font-size:1.3rem;">GPT-5.4 via Azure OpenAI</h4>
+        <p class="card-body">Best when building org-specific AI apps on Microsoft Azure infrastructure. Enterprise contracts include compliance SLAs, data residency guarantees, and M365 integration hooks.</p>
+        <div class="chips-row"><span class="chip">Azure Native</span><span class="chip">Compliance SLAs</span></div>
+      </div>
+      <div class="card">
+        <div class="card-label">Anthropic API · Long Context</div>
+        <h4 class="card-title" style="font-size:1.3rem;">Claude Opus 4.7 via Anthropic API</h4>
+        <p class="card-body">Preferred for tasks needing long context and careful reasoning: contracts, compliance reviews, internal policy Q&amp;A, and multi-document analysis with safety-aligned outputs.</p>
+        <div class="chips-row"><span class="chip">Long Context</span><span class="chip">Safety Aligned</span></div>
+      </div>
+      <div class="card">
+        <div class="card-label">Google Cloud · Vertex AI</div>
+        <h4 class="card-title" style="font-size:1.3rem;">Gemini 3.1 Pro via Vertex AI</h4>
+        <p class="card-body">Best when the org is Google Cloud-native; deep integration with BigQuery, Workspace, and Vertex AI for custom agent building with 2M+ token context.</p>
+        <div class="chips-row"><span class="chip">BigQuery Native</span><span class="chip">2M+ Context</span></div>
+      </div>
+      <div class="card">
+        <div class="card-label">AWS · Multi-Model Flexibility</div>
+        <h4 class="card-title" style="font-size:1.3rem;">AWS Bedrock (Multi-Model)</h4>
+        <p class="card-body">Best for teams that want model flexibility — switch between Claude, Llama 4, Mistral, and others — without being locked to one provider. Usage-based pricing with native agent orchestration.</p>
+        <div class="chips-row"><span class="chip">Model Agnostic</span><span class="chip">Usage-Based</span></div>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- SECTION 5: MARKETING & SALES -->
+<!-- SECTION 5: MARKETING -->
 <section id="marketing">
   <div class="container">
     <div class="section-header">
-      <span class="section-tag">Section 05 & 06</span>
-      <h2 class="section-title">Marketing & <em>Sales Intelligence</em></h2>
-      <p class="section-sub">Drive growth with brand consistency and outreach automation.</p>
+      <span class="section-tag">Section 05 · April 2026</span>
+      <h2 class="section-title">Marketing <em>Intelligence</em></h2>
+      <p class="section-sub">Four-layer AI stack: ideation and writing, SEO and search visibility, campaign execution, and analytics and attribution.</p>
     </div>
 
-    <div class="card-grid card-grid-2">
-      <div class="wide-card">
-        <h3 style="margin-bottom:20px;">Marketing Leaders</h3>
-        <p><strong>Claude Opus 4.7:</strong> Strong for long-form copy, brand-voice consistency, and multi-channel campaign planning.</p>
-        <p><strong>Gemini 3.1 Pro:</strong> Strong for search- and SEO-style content and analytics-driven messaging.</p>
-        <p><strong>GPT-5.4 Pro:</strong> Best for high-volume ad copy, email sequences, and social media content.</p>
-        
-        <div class="tools-list" style="margin-top:20px;">
-          <div class="tool-item"><span>🚀</span><div><p class="tool-name">HubSpot Marketing Hub</p><p class="tool-desc">End-to-end campaigns, email, landing pages, and analytics.</p></div></div>
-          <div class="tool-item"><span>📧</span><div><p class="tool-name">Mailchimp</p><p class="tool-desc">Accessible email-marketing automation.</p></div></div>
-        </div>
+    <!-- 5.1 Stack Structure -->
+    <h3 style="font-size:1.6rem; margin-bottom:20px; border-bottom:2px solid var(--wsj-border); padding-bottom:10px;">5.1 How Marketing AI Stacks Are Structured in 2026</h3>
+    <div class="card-grid card-grid-2" style="margin-bottom:30px;">
+      <div class="card">
+        <div class="card-label">Layer 1</div>
+        <h4 class="card-title" style="font-size:1.3rem;">Ideation &amp; Writing</h4>
+        <p class="card-body">Foundation models and specialized writing tools for copy creation, brainstorming, and long-form brand content.</p>
       </div>
-
-      <div class="wide-card">
-        <h3 style="margin-bottom:20px;">Sales Stack</h3>
-        <p><strong>Claude Opus 4.7:</strong> Best for personalized outreach drafts, objection handling, and deal-strategy notes.</p>
-        <p><strong>Gemini 3.1 Pro:</strong> Strong for CRM-linked research and ABM messaging.</p>
-
-        <div class="tools-list" style="margin-top:20px;">
-          <div class="tool-item"><span>🏆</span><div><p class="tool-name">Salesforce + Einstein</p><p class="tool-desc">Predictive lead-scoring and CRM-native AI.</p></div></div>
-          <div class="tool-item"><span>🎙️</span><div><p class="tool-name">Gong</p><p class="tool-desc">Conversation intelligence for call analysis and coaching.</p></div></div>
-        </div>
+      <div class="card">
+        <div class="card-label">Layer 2</div>
+        <h4 class="card-title" style="font-size:1.3rem;">SEO &amp; Search AI</h4>
+        <p class="card-body">Content optimization and AI-search visibility — optimizing to appear in AI-generated answers (Google AI Overviews, Perplexity), not just blue-link rankings.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Layer 3</div>
+        <h4 class="card-title" style="font-size:1.3rem;">Campaign Execution &amp; Automation</h4>
+        <p class="card-body">Email, paid ads, and multi-channel workflows — from HubSpot and Klaviyo to Google Performance Max and Meta Advantage+.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Layer 4</div>
+        <h4 class="card-title" style="font-size:1.3rem;">Analytics &amp; Attribution</h4>
+        <p class="card-body">Predictive performance modeling and ROAS forecasting before campaigns scale — reducing "learning phase disasters" and improving budget confidence.</p>
       </div>
     </div>
-    
+
     <div class="note-box">
-      <strong>Customer Engagement:</strong> Drift / HubSpot AI Customer Agents are the leading choices for lead-qualification and chat-bot flows in 2026.
+      <strong>2026 Minimum Stack (highest ROI at lowest incremental cost):</strong> Every marketing team regardless of size should have three things — an AI writing tool (<strong>Claude Pro or ChatGPT Plus</strong>), their email platform's built-in AI features, and <strong>Google/Meta's native campaign AI</strong> (Performance Max, Advantage+), because these three consistently deliver the highest ROI at the lowest incremental cost.
     </div>
+
+    <!-- 5.2 Writing & Content Creation -->
+    <h3 style="font-size:1.6rem; margin:50px 0 20px; border-bottom:2px solid var(--wsj-border); padding-bottom:10px;">5.2 Writing &amp; Content Creation</h3>
+
+    <div class="table-wrap">
+      <table class="editorial-table">
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>Best For</th>
+            <th>Key Strength</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ChatGPT (GPT-5.4)</td>
+            <td>Ad copy, email drafts, brainstorming at speed</td>
+            <td>Versatile, widely adopted, strong on short-form content and rapid iteration</td>
+          </tr>
+          <tr>
+            <td>Claude Opus 4.7</td>
+            <td>Long-form brand content, tone-consistent copy, campaign strategy</td>
+            <td>Best for long-form and nuanced brand voice; handles entire campaign briefs in one pass</td>
+          </tr>
+          <tr>
+            <td>Jasper AI</td>
+            <td>Brand-governed content production at scale</td>
+            <td>Brand kits enforce tone and style across teams; integrates directly with SurferSEO</td>
+          </tr>
+          <tr>
+            <td>Writesonic</td>
+            <td>Multi-channel content + marketing automation for growth teams</td>
+            <td>Evolved in 2026 into a full marketing AI suite beyond just copywriting</td>
+          </tr>
+          <tr>
+            <td>Copy.ai SalesOS</td>
+            <td>Sales-marketing aligned content (outreach, landing pages)</td>
+            <td>Bridges sales and marketing copy workflows; strong for GTM teams</td>
+          </tr>
+          <tr>
+            <td>Gemini 3.1 Pro</td>
+            <td>Multi-channel planning, research-backed content, analytics-driven messaging</td>
+            <td>Strong research capabilities + long-context for full campaign briefs and strategy docs</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note-box">
+      <strong>Recommended writing workflow:</strong> Draft with <strong>GPT-5.4 or Claude Opus 4.7</strong> → optimize for SEO with <strong>Jasper + SurferSEO</strong> → distribute through <strong>HubSpot or Klaviyo</strong>.
+    </div>
+
+    <!-- 5.3 SEO & Search Visibility -->
+    <h3 style="font-size:1.6rem; margin:50px 0 20px; border-bottom:2px solid var(--wsj-border); padding-bottom:10px;">5.3 SEO &amp; AI Search Visibility</h3>
+    <p style="font-family:var(--font-serif); margin-bottom:20px; color:var(--wsj-gray-dark);">In 2026 the shift toward AI-generated search results — Google AI Overviews, Perplexity, Bing Copilot — means SEO tools must now optimize for being <em>cited in AI answers</em>, not just traditional blue-link rankings.</p>
+
+    <div class="tools-list" style="margin-bottom:30px;">
+      <div class="tool-item">
+        <span class="tool-icon">📈</span>
+        <div>
+          <p class="tool-name">SurferSEO</p>
+          <p class="tool-desc">Best tool for content optimization and SERP alignment; uses real-time Google analysis to recommend keywords, word counts, and content structure. Integrates directly with Jasper and WordPress.</p>
+        </div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">🔍</span>
+        <div>
+          <p class="tool-name">Semrush AI Writing Assistant &amp; AI Visibility Toolkit</p>
+          <p class="tool-desc">Combines keyword intelligence and AI copywriting in a single workflow. Launched 2025 and refined in 2026 specifically for AI-search optimization.</p>
+        </div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">✏️</span>
+        <div>
+          <p class="tool-name">Clearscope</p>
+          <p class="tool-desc">Premium content grading and topic-coverage tool. Strong for teams with editorial standards that need to systematically achieve comprehensive topic coverage.</p>
+        </div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">🤖</span>
+        <div>
+          <p class="tool-name">OtterlyAI</p>
+          <p class="tool-desc">Specialized for AI-search visibility optimization — appearing in LLM-generated answers vs. traditional SERP results. An emerging niche but fast-growing in 2026 as AI-generated answers capture more search traffic.</p>
+        </div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">🔗</span>
+        <div>
+          <p class="tool-name">Ahrefs + AI Features</p>
+          <p class="tool-desc">Backlink analysis and keyword research augmented with AI-driven topic clustering and competitive gap analysis. The standard for technical SEO and content-gap identification.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5.4 Campaign Execution & Automation -->
+    <h3 style="font-size:1.6rem; margin:50px 0 20px; border-bottom:2px solid var(--wsj-border); padding-bottom:10px;">5.4 Campaign Execution &amp; Automation</h3>
+
+    <div class="table-wrap">
+      <table class="editorial-table">
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>Primary Use</th>
+            <th>Best For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HubSpot Marketing Hub + Breeze AI</td>
+            <td>End-to-end inbound marketing: email, landing pages, social, analytics, lead nurturing</td>
+            <td>SMBs and mid-market teams wanting all-in-one simplicity</td>
+          </tr>
+          <tr>
+            <td>Salesforce Marketing Cloud + Einstein AI</td>
+            <td>Enterprise ABM, predictive lead scoring, intelligent segmentation, multi-touch attribution, dynamic content</td>
+            <td>Large enterprises running complex B2B campaigns ($1,000+/month)</td>
+          </tr>
+          <tr>
+            <td>Marketo (Adobe)</td>
+            <td>Enterprise content personalization, Dynamic Chat AI Q&amp;A, Marketo Measure attribution</td>
+            <td>Large enterprises in the Adobe ecosystem; advanced multi-channel campaigns ($1,000–5,000+/month)</td>
+          </tr>
+          <tr>
+            <td>ZoomInfo Marketing</td>
+            <td>B2B intent-data-driven campaign execution; monitors buying signals to auto-trigger campaigns</td>
+            <td>Enterprise and mid-market; integrates with Salesforce and HubSpot</td>
+          </tr>
+          <tr>
+            <td>Klaviyo</td>
+            <td>AI-powered email and SMS automation for e-commerce</td>
+            <td>E-commerce brands needing behavioral triggers and predictive send-time optimization</td>
+          </tr>
+          <tr>
+            <td>ActiveCampaign</td>
+            <td>SMB email automation with AI segmentation and light CRM</td>
+            <td>Small to mid-sized teams wanting marketing + CRM in one affordable platform</td>
+          </tr>
+          <tr>
+            <td>Google Performance Max + Meta Advantage+</td>
+            <td>Paid ad campaigns with AI-driven targeting and budget allocation</td>
+            <td>Every brand running paid search and social — free native AI often outperforms manual targeting</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 5.5 Analytics & Attribution -->
+    <h3 style="font-size:1.6rem; margin:50px 0 20px; border-bottom:2px solid var(--wsj-border); padding-bottom:10px;">5.5 Analytics, Attribution &amp; Predictive Marketing</h3>
+    <p style="font-family:var(--font-serif); margin-bottom:20px; color:var(--wsj-gray-dark);">A key 2026 development is <strong>predictive ROAS forecasting before campaigns scale</strong>, which reduces "learning phase disasters" and helps agencies and in-house teams allocate budgets with more confidence.</p>
+
+    <div class="tools-list">
+      <div class="tool-item">
+        <span class="tool-icon">🏆</span>
+        <div>
+          <p class="tool-name">Salesforce Marketing Cloud Einstein</p>
+          <p class="tool-desc">Multi-touch attribution, predictive segmentation, and ROI tracking integrated inside the Salesforce ecosystem. Best for orgs already invested in the Salesforce platform.</p>
+        </div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">💬</span>
+        <div>
+          <p class="tool-name">ThoughtSpot</p>
+          <p class="tool-desc">Natural-language BI — marketing teams can query campaign data in plain English without SQL. Strong for democratizing data access across non-technical marketing teams.</p>
+        </div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">📡</span>
+        <div>
+          <p class="tool-name">Supermetrics + AI</p>
+          <p class="tool-desc">Aggregates marketing data from all channels into dashboards; increasingly used with AI prompts to surface anomalies and insights. Good for agencies managing multiple clients and channels.</p>
+        </div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">📊</span>
+        <div>
+          <p class="tool-name">Improvado</p>
+          <p class="tool-desc">Enterprise marketing analytics platform; consolidates multi-channel performance data with AI-assisted insights for CMOs. Strong for large enterprises with complex attribution needs.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION 6: SALES -->
+<section id="sales">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Section 06 · April 2026</span>
+      <h2 class="section-title">Sales <em>Intelligence</em></h2>
+      <p class="section-sub">Four-layer sales AI stack: prospecting and data intelligence, outreach and sequencing, conversation intelligence, and CRM and pipeline management.</p>
+    </div>
+
+    <!-- 6.1 Stack Architecture -->
+    <h3 style="font-size:1.6rem; margin-bottom:20px; border-bottom:2px solid var(--wsj-border); padding-bottom:10px;">6.1 The Sales AI Stack Architecture</h3>
+    <div class="card-grid card-grid-2" style="margin-bottom:30px;">
+      <div class="card">
+        <div class="card-label">Layer 1</div>
+        <h4 class="card-title" style="font-size:1.3rem;">Prospecting &amp; Data Intelligence</h4>
+        <p class="card-body">Finding the right leads with intent signals — tools like ZoomInfo, Apollo.io, and Cognism that surface verified contacts and account-level buying signals.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Layer 2</div>
+        <h4 class="card-title" style="font-size:1.3rem;">Outreach &amp; Sequencing</h4>
+        <p class="card-body">Automating personalized multi-channel campaigns — Outreach, Salesloft, and Reply.io orchestrate email, LinkedIn, and call cadences at scale.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Layer 3</div>
+        <h4 class="card-title" style="font-size:1.3rem;">Conversation Intelligence</h4>
+        <p class="card-body">Analyzing calls and meetings — Gong, Salesloft Conversations, and Chorus transcribe and analyze every call for coaching insights, deal risks, and competitive mentions.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Layer 4</div>
+        <h4 class="card-title" style="font-size:1.3rem;">CRM, Forecasting &amp; Pipeline</h4>
+        <p class="card-body">Scoring deals and predicting outcomes — Salesforce Agentforce 360, HubSpot Breeze AI, and Gong Forecast deliver AI-driven revenue predictions beyond simple CRM stage tracking.</p>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <strong>Key principle:</strong> Match AI tools to your biggest bottleneck — deep coaching needs revenue intelligence (<strong>Gong</strong>), high-volume outbound needs sequencing tools (<strong>Outreach/Salesloft</strong>), and context fragmentation needs a cross-platform AI assistant (<strong>ZoomInfo GTM Workspace</strong>).
+    </div>
+
+    <!-- 6.2 Prospecting & Data Intelligence -->
+    <h3 style="font-size:1.6rem; margin:50px 0 20px; border-bottom:2px solid var(--wsj-border); padding-bottom:10px;">6.2 Prospecting &amp; Data Intelligence</h3>
+
+    <div class="table-wrap">
+      <table class="editorial-table">
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>Primary Focus</th>
+            <th>Key Differentiator</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ZoomInfo + Copilot + GTM Workspace</td>
+            <td>B2B intelligence + GTM execution</td>
+            <td>500M+ verified contacts; AI account prioritization; Copilot for personalized outreach generation; GTM Workspace (Oct 2025) unifies prospecting and execution in one interface</td>
+          </tr>
+          <tr>
+            <td>Apollo.io</td>
+            <td>Prospecting + engagement</td>
+            <td>Automated sequences + contact database; best value for SMB to mid-market teams</td>
+          </tr>
+          <tr>
+            <td>Cognism</td>
+            <td>GDPR-compliant B2B data</td>
+            <td>Mobile-verified contacts + intent data; best for European and compliance-focused teams</td>
+          </tr>
+          <tr>
+            <td>LinkedIn Sales Navigator + AI</td>
+            <td>Social selling and account mapping</td>
+            <td>Native LinkedIn network intelligence + AI-assisted outreach suggestions</td>
+          </tr>
+          <tr>
+            <td>Lusha</td>
+            <td>SMB prospecting</td>
+            <td>Affordable contact data enrichment for early-stage and budget-constrained teams</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 6.3 Outreach & Sequencing -->
+    <h3 style="font-size:1.6rem; margin:50px 0 20px; border-bottom:2px solid var(--wsj-border); padding-bottom:10px;">6.3 Outreach &amp; Sequencing</h3>
+
+    <div class="table-wrap">
+      <table class="editorial-table">
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>Primary Focus</th>
+            <th>Best For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Outreach</td>
+            <td>Sales execution platform</td>
+            <td>Enterprise teams with complex multi-channel cadences; AI-driven next-best-action recommendations</td>
+          </tr>
+          <tr>
+            <td>Salesloft (Rhythm engine)</td>
+            <td>Revenue workflow + coaching</td>
+            <td>Teams needing outreach sequencing AND rep development coaching in one platform; Rhythm engine orchestrates multi-channel cadences</td>
+          </tr>
+          <tr>
+            <td>Reply.io</td>
+            <td>Multi-channel AI outreach</td>
+            <td>SMBs needing affordable AI email writing + LinkedIn integration in one tool</td>
+          </tr>
+          <tr>
+            <td>Copy.ai SalesOS</td>
+            <td>AI writing for outreach</td>
+            <td>Generates personalized cold emails, LinkedIn messages, and follow-ups at scale</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note-box">
+      <strong>Gong vs Salesloft in 2026:</strong> Gong focuses on conversation intelligence and revenue analytics. Salesloft delivers unified sales engagement with integrated conversation capabilities. Teams choosing Gong prioritize conversation insights and deal coaching; Salesloft buyers need comprehensive execution workflows from prospecting through close.
+    </div>
+
+    <!-- 6.4 Conversation Intelligence -->
+    <h3 style="font-size:1.6rem; margin:50px 0 20px; border-bottom:2px solid var(--wsj-border); padding-bottom:10px;">6.4 Conversation Intelligence</h3>
+    <p style="font-family:var(--font-serif); margin-bottom:20px; color:var(--wsj-gray-dark);">Conversation intelligence tools record, transcribe, and analyze sales calls and demos to surface coaching insights, deal risks, and competitive mentions.</p>
+
+    <div class="tools-list" style="margin-bottom:30px;">
+      <div class="tool-item">
+        <span class="tool-icon">🏆</span>
+        <div>
+          <p class="tool-name">Gong</p>
+          <p class="tool-desc">The gold standard for conversation intelligence; advanced AI analysis, deal forecasting, and coaching recommendations. Best for teams focused on call quality, forecast accuracy, and rep coaching at scale.</p>
+        </div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">🔗</span>
+        <div>
+          <p class="tool-name">ZoomInfo Chorus</p>
+          <p class="tool-desc">Conversation intelligence tightly integrated with the ZoomInfo GTM Context Graph; gives more account-level context alongside call analysis for teams already using ZoomInfo for prospecting.</p>
+        </div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">🎯</span>
+        <div>
+          <p class="tool-name">Salesloft Conversations</p>
+          <p class="tool-desc">Embedded in the Salesloft platform; strong for teams already using Salesloft's sequencing workflows who want conversation intelligence without adding another vendor.</p>
+        </div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">📊</span>
+        <div>
+          <p class="tool-name">Read.ai</p>
+          <p class="tool-desc">Lighter-weight meeting intelligence across Zoom, Teams, and Slack. Good for early-stage teams not yet ready for enterprise Gong pricing but wanting call analysis and meeting summaries.</p>
+        </div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">🎙️</span>
+        <div>
+          <p class="tool-name">Fireflies.ai</p>
+          <p class="tool-desc">Best-in-class for automated transcription + CRM auto-update post-call; widely used for meeting summaries and action items. Strong for teams that want zero-friction CRM logging.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6.5 CRM & Pipeline Intelligence -->
+    <h3 style="font-size:1.6rem; margin:50px 0 20px; border-bottom:2px solid var(--wsj-border); padding-bottom:10px;">6.5 CRM &amp; Pipeline Intelligence</h3>
+
+    <div class="table-wrap">
+      <table class="editorial-table">
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>Best For</th>
+            <th>Key AI Capability</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Salesforce Sales Cloud + Agentforce 360</td>
+            <td>Large orgs with ops teams; deeply customized pipelines</td>
+            <td>Einstein AI: predictive lead scoring, opportunity insights, automated activity capture, revenue forecasting; Agentforce 360 for custom AI agents</td>
+          </tr>
+          <tr>
+            <td>HubSpot CRM + Breeze AI</td>
+            <td>Teams wanting marketing-first CRM with AI; free tier available</td>
+            <td>AI lead scoring, email tracking, pipeline automation, meeting scheduling</td>
+          </tr>
+          <tr>
+            <td>Pipedrive Smart CRM</td>
+            <td>Visual-pipeline-focused sales teams</td>
+            <td>Deal probability prediction, workflow automation, intuitive drag-and-drop interface</td>
+          </tr>
+          <tr>
+            <td>Affinity</td>
+            <td>Relationship-driven sales (VCs, PE, professional services)</td>
+            <td>Automated relationship intelligence and network mapping from email and calendar data</td>
+          </tr>
+          <tr>
+            <td>Lightfield</td>
+            <td>Founder-led B2B and AI-native startups</td>
+            <td>AI agent that understands your business context and takes actions inside the CRM</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 6.6 AI-Powered Sales Forecasting -->
+    <h3 style="font-size:1.6rem; margin:50px 0 20px; border-bottom:2px solid var(--wsj-border); padding-bottom:10px;">6.6 AI-Powered Sales Forecasting</h3>
+    <p style="font-family:var(--font-serif); margin-bottom:20px; color:var(--wsj-gray-dark);">Accurate forecasting is where AI is delivering some of the <strong>highest measurable ROI</strong> in sales organizations in 2026 — models trained on pipeline health, call sentiment, and engagement signals consistently outperform traditional CRM-only forecasting.</p>
+
+    <div class="tools-list" style="margin-bottom:40px;">
+      <div class="tool-item">
+        <span class="tool-icon">📈</span>
+        <div>
+          <p class="tool-name">Salesforce Einstein Forecasting</p>
+          <p class="tool-desc">Predicts revenue outcomes based on pipeline health and historical close rates; integrated into Agentforce 360 for deal-level insights and anomaly detection.</p>
+        </div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">🎙️</span>
+        <div>
+          <p class="tool-name">Gong Forecast</p>
+          <p class="tool-desc">Uses conversation data, deal engagement signals, and rep sentiment to produce AI-driven revenue forecasts that are more accurate than CRM-alone methods — especially for teams with long sales cycles.</p>
+        </div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">🏢</span>
+        <div>
+          <p class="tool-name">HubSpot AI Forecasting</p>
+          <p class="tool-desc">For mid-market teams: AI-assisted deal scoring and pipeline health scoring within HubSpot's reporting. Strong for teams that want forecasting without migrating to Salesforce.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6.7 Recommended Sales AI Stack by Team Size -->
+    <h3 style="font-size:1.6rem; margin:50px 0 20px; border-bottom:2px solid var(--wsj-border); padding-bottom:10px;">6.7 Recommended Sales AI Stack by Team Size</h3>
+    <div class="stack-grid">
+      <div class="stack-card">
+        <h3 class="stack-card-title">🚀 Early-Stage / Founder-Led</h3>
+        <table class="stack-table">
+          <tr><td>Prospecting</td><td>Apollo.io</td></tr>
+          <tr><td>Outreach</td><td>Reply.io or Salesloft SMB</td></tr>
+          <tr><td>CRM</td><td>HubSpot (free + Breeze AI)</td></tr>
+          <tr><td>Meetings</td><td>Fireflies.ai</td></tr>
+          <tr><td>Writing</td><td>Claude Opus 4.7 / GPT-5.4</td></tr>
+        </table>
+        <p class="stack-summary">Apollo.io for affordable contact data; HubSpot's generous free tier for CRM; Fireflies.ai for zero-friction CRM logging after every call; Claude/GPT for personalized email drafts.</p>
+      </div>
+      <div class="stack-card">
+        <h3 class="stack-card-title">📈 Mid-Market (50–500 AEs)</h3>
+        <table class="stack-table">
+          <tr><td>Prospecting</td><td>ZoomInfo + Copilot</td></tr>
+          <tr><td>Outreach</td><td>Outreach or Salesloft</td></tr>
+          <tr><td>CRM</td><td>Salesforce + Einstein</td></tr>
+          <tr><td>Conversation</td><td>Gong</td></tr>
+          <tr><td>Analytics</td><td>ThoughtSpot</td></tr>
+        </table>
+        <p class="stack-summary">ZoomInfo for intent-driven account prioritization; Gong for conversation coaching and forecast accuracy; ThoughtSpot for natural-language pipeline queries without SQL.</p>
+      </div>
+      <div class="stack-card">
+        <h3 class="stack-card-title">🏢 Enterprise</h3>
+        <table class="stack-table">
+          <tr><td>GTM Platform</td><td>ZoomInfo GTM Workspace</td></tr>
+          <tr><td>CRM + Agents</td><td>Salesforce Agentforce 360</td></tr>
+          <tr><td>Conversation</td><td>Gong</td></tr>
+          <tr><td>Governance</td><td>IBM Watsonx / AWS Bedrock</td></tr>
+        </table>
+        <p class="stack-summary">ZoomInfo GTM Workspace + Salesforce Agentforce 360 + Gong for the full GTM loop. IBM Watsonx or AWS Bedrock for building compliant, auditable custom sales AI on foundation models.</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -1148,9 +1781,9 @@ footer {
           <tr><td>Students</td><td>Gemini 3.1 Pro, GPT-5.4 Pro, Claude Opus 4.7</td><td>Gemini 3.1 Pro: Feb 19, 2026; GPT-5.4: March 5, 2026; Opus 4.7: April 16, 2026.</td></tr>
           <tr><td>Engineering</td><td>Gemini 3.1 Pro, Claude Opus 4.7, Llama 4 Scout & Maverick</td><td>Llama 4 Scout: 10M token context; Maverick: reasoning-focused; both released April 2026.</td></tr>
           <tr><td>Software</td><td>Claude Opus 4.7, Gemini 3.1 Pro, MiniMax M2.5, GLM-5/Qwen-3-Coder-Next</td><td>MiniMax M2.5: up to 80.2% on Verified (Feb) and 75.8% on April leaderboards; strong for cost-efficiency.</td></tr>
-          <tr><td>Business</td><td>GPT-5.4 Pro, Gemini 3.1 Pro, Claude Opus 4.7</td><td>All three publicly released between Feb and April 2026.</td></tr>
-          <tr><td>Marketing</td><td>Claude Opus 4.7, Gemini 3.1 Pro, GPT-5.4 Pro</td><td>Emphasis on long-form copy, SEO, and multi-channel planning.</td></tr>
-          <tr><td>Sales</td><td>Claude Opus 4.7, Gemini 3.1 Pro</td><td>Strong for personalized outreach and CRM-linked research.</td></tr>
+          <tr><td>Business</td><td>M365 Copilot (GPT-5.4), Google Gemini Enterprise, Salesforce Agentforce, AWS Bedrock</td><td>Platform fit drives choice: Microsoft for Office 365 orgs, Google for Workspace orgs, Salesforce for CRM-native orgs; AWS Bedrock for multi-model flexibility.</td></tr>
+          <tr><td>Marketing</td><td>Claude Opus 4.7, GPT-5.4, Jasper AI, HubSpot Breeze AI, SurferSEO, Klaviyo</td><td>Four-layer stack: writing (GPT-5.4/Claude), SEO (SurferSEO/Semrush), campaign execution (HubSpot/Salesforce MC), analytics (ThoughtSpot/Improvado).</td></tr>
+          <tr><td>Sales</td><td>ZoomInfo + Copilot, Gong, Salesforce Agentforce 360, Outreach / Salesloft, Apollo.io</td><td>Match tools to bottleneck: Gong for conversation coaching, Outreach/Salesloft for outbound sequencing, Salesforce Agentforce for full pipeline automation.</td></tr>
           <tr><td>Finance</td><td>Shortcut (specialist), Claude Opus 4.7 in Excel, GPT-5.4/Gemini 3.1 Pro</td><td>Shortcut best for embedded Excel modeling; models used for analysis and reports.</td></tr>
           <tr><td>Design</td><td>Claude Design, Gemini Vision/Stitch, Figma AI/Make</td><td>Claude-and-Figma-integrated flows are strongest for product teams.</td></tr>
         </tbody>
