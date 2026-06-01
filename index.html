@@ -1,11 +1,133 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=AI_landscape2026.html">
-  <title>AI Landscape 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Landscape 2026 — The Definitive Editorial Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700;800;900&family=Public+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --wsj-black: #1a1a1a;
+      --wsj-blue: #003366;
+      --wsj-gray-dark: #333333;
+      --wsj-gray-med: #666666;
+      --wsj-border: #d2d2d2;
+      --white: #ffffff;
+      --cream: #f9f7f2;
+      --font-serif: 'Libre Baskerville', serif;
+      --font-display: 'Playfair Display', serif;
+      --font-sans: 'Public Sans', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--cream);
+      color: var(--wsj-black);
+      font-family: var(--font-sans);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    .landing {
+      max-width: 700px;
+      text-align: center;
+    }
+    .landing-logo {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      margin-bottom: 10px;
+    }
+    .landing-sub {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      color: var(--wsj-gray-med);
+      margin-bottom: 50px;
+    }
+    .report-links {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .report-link {
+      display: block;
+      text-decoration: none;
+      background: var(--white);
+      border: 1px solid var(--wsj-border);
+      padding: 30px 35px;
+      text-align: left;
+      transition: border-color 0.2s, transform 0.15s;
+    }
+    .report-link:hover {
+      border-color: var(--wsj-black);
+      transform: translateY(-2px);
+    }
+    .report-link .tag {
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--wsj-blue);
+      margin-bottom: 8px;
+    }
+    .report-link .title {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--wsj-black);
+      margin-bottom: 6px;
+    }
+    .report-link .desc {
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      color: var(--wsj-gray-med);
+    }
+    .report-link.latest {
+      border-left: 5px solid var(--wsj-blue);
+    }
+    .report-link.latest .tag::after {
+      content: " — LATEST";
+      color: var(--wsj-blue);
+    }
+    .footer-note {
+      margin-top: 50px;
+      font-size: 0.75rem;
+      color: var(--wsj-gray-med);
+      letter-spacing: 0.05em;
+    }
+    @media (max-width: 600px) {
+      .landing-logo { font-size: 2rem; }
+      .report-link .title { font-size: 1.2rem; }
+    }
+  </style>
 </head>
 <body>
-  <p>Redirecting to <a href="AI_landscape2026.html">AI Landscape 2026</a>…</p>
+
+  <div class="landing">
+    <div class="landing-logo">THE AI LANDSCAPE</div>
+    <p class="landing-sub">The definitive field-specific breakdown of foundation models, specialist tools, and winning AI stacks.</p>
+    
+    <div class="report-links">
+      <a href="AI_landscape_may2026.html" class="report-link latest">
+        <div class="tag">May 2026 Monthly Report</div>
+        <div class="title">The Month Agents Went Live</div>
+        <div class="desc">Agents moved to GA, frontier defaults reshuffled, and safety infrastructure hardened across the industry.</div>
+      </a>
+      <a href="AI_landscape2026.html" class="report-link">
+        <div class="tag">April 2026 Special Report</div>
+        <div class="title">Every AI Model Worth Using Right Now</div>
+        <div class="desc">The definitive cross-disciplinary analysis covering 12+ flagships across 8 fields.</div>
+      </a>
+    </div>
+
+    <p class="footer-note">© 2026 MONTHLY REPORT. SAI SRIKIRAN J.</p>
+  </div>
+
 </body>
 </html>
