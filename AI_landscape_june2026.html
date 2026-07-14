@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Landscape — June 2026 Monthly Report</title>
+<meta name="description" content="The AI Landscape June 2026 Monthly Report: Export controls, GPT-5.6, open-weight watershed, Figma Config, agentic compute crisis, and sovereign AI deployments.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700;800;900&family=Public+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --wsj-black: #1a1a1a;
+  --wsj-blue: #003366;
+  --wsj-red: #c0002a;
+  --wsj-gray-dark: #333333;
+  --wsj-gray-med: #666666;
+  --wsj-gray-light: #f4f4f4;
+  --wsj-border: #d2d2d2;
+  --white: #ffffff;
+  --cream: #f9f7f2;
+
+  --font-serif: 'Libre Baskerville', serif;
+  --font-display: 'Playfair Display', serif;
+  --font-sans: 'Public Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--white);
+  color: var(--wsj-black);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4 { font-family: var(--font-display); color: var(--wsj-black); }
+p { margin-bottom: 1.25rem; color: var(--wsj-gray-dark); font-size: 1rem; }
+
+/* LAYOUT */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 40px; position: relative; }
+
+/* HEADER & NAV */
+nav {
+  background: var(--white);
+  border-bottom: 2px solid var(--wsj-black);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 900;
+  text-decoration: none;
+  color: var(--wsj-black);
+  letter-spacing: -0.04em;
+  margin-bottom: 12px;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 10px 0;
+  border-top: 1px solid var(--wsj-border);
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.nav-links a {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--wsj-gray-med);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--wsj-blue); }
+
+/* TICKER */
+.ticker-wrap {
+  border-bottom: 1px solid var(--wsj-border);
+  padding: 8px 0;
+  background: var(--wsj-black);
+  color: var(--white);
+  overflow: hidden;
+}
+.ticker { display: flex; gap: 60px; animation: ticker 55s linear infinite; white-space: nowrap; }
+.ticker-item { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.05em; text-transform: uppercase; }
+.ticker-item span { font-weight: 700; color: var(--wsj-border); }
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* HERO */
+.hero {
+  padding: 100px 0 80px;
+  text-align: center;
+  background-color: var(--cream);
+  border-bottom: 1px solid var(--wsj-border);
+}
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--wsj-red);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.hero-title {
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  line-height: 1.0;
+  margin-bottom: 30px;
+  letter-spacing: -0.02em;
+}
+.hero-title .accent { color: var(--wsj-red); font-style: italic; }
+.hero-desc {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  max-width: 900px;
+  margin: 0 auto 50px;
+  color: var(--wsj-gray-dark);
+}
+.hero-meta {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  border-top: 1px solid var(--wsj-border);
+  padding-top: 40px;
+}
+.meta-item { display: flex; flex-direction: column; gap: 4px; }
+.meta-label { font-family: var(--font-mono); font-size: 0.7rem; color: var(--wsj-gray-med); text-transform: uppercase; }
+.meta-value { font-family: var(--font-sans); font-size: 1.4rem; font-weight: 800; }
+
+/* SECTION COMMON */
+section { padding: 100px 0; border-bottom: 1px solid var(--wsj-border); }
+section:nth-of-type(even) { background-color: var(--wsj-gray-light); }
+.section-header { margin-bottom: 60px; border-bottom: 4px solid var(--wsj-black); padding-bottom: 20px; }
+.section-tag { font-family: var(--font-mono); color: var(--wsj-red); font-size: 0.8rem; text-transform: uppercase; margin-bottom: 10px; display: block; font-weight: 700; }
+.section-title { font-size: 3.5rem; font-weight: 900; line-height: 1.1; margin-bottom: 15px; }
+.section-sub { font-family: var(--font-serif); font-size: 1.2rem; color: var(--wsj-gray-med); max-width: 800px; }
+
+/* EDITORIAL CARDS */
+.card-grid { display: grid; gap: 30px; }
+.card-grid-2 { grid-template-columns: 1fr 1fr; }
+.card-grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--wsj-border);
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.card:hover { border-color: var(--wsj-black); }
+.card-label { font-family: var(--font-mono); font-size: 0.65rem; text-transform: uppercase; color: var(--wsj-red); margin-bottom: 15px; font-weight: 700; border-bottom: 1px solid var(--wsj-border); padding-bottom: 5px; }
+.card-title { font-size: 1.8rem; margin-bottom: 15px; line-height: 1.2; }
+.card-body { font-size: 0.95rem; line-height: 1.6; color: var(--wsj-gray-dark); margin-bottom: 20px; flex-grow: 1; }
+
+.chips-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  padding: 4px 10px;
+  border: 1px solid var(--wsj-black);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.chip.red { border-color: var(--wsj-red); color: var(--wsj-red); }
+
+/* WIDE CARD */
+.wide-card {
+  background: var(--white);
+  border: 1px solid var(--wsj-border);
+  padding: 45px;
+  margin-bottom: 30px;
+}
+.wide-card-title { font-size: 2rem; margin-bottom: 15px; }
+
+/* ALERT BOX */
+.alert-box {
+  background: #fff8f8;
+  border: 1px solid #e8b0b0;
+  border-left: 6px solid var(--wsj-red);
+  padding: 30px;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  margin: 40px 0;
+}
+.alert-box strong { color: var(--wsj-red); }
+
+/* TABLES - WSJ STYLE */
+.table-wrap { width: 100%; overflow-x: auto; margin: 50px 0; }
+.editorial-table { width: 100%; border-collapse: collapse; text-align: left; border-top: 3px solid var(--wsj-black); }
+.editorial-table th { padding: 15px 20px; border-bottom: 1px solid var(--wsj-black); font-family: var(--font-sans); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--wsj-gray-med); font-weight: 800; }
+.editorial-table td { padding: 25px 20px; border-bottom: 1px solid var(--wsj-border); vertical-align: top; }
+.editorial-table td:first-child { font-weight: 800; font-family: var(--font-sans); font-size: 1rem; }
+.editorial-table td:nth-child(2) { font-family: var(--font-mono); font-size: 0.82rem; color: var(--wsj-blue); line-height: 1.8; }
+.editorial-table tr:hover { background: var(--cream); }
+
+/* TOOLS LIST */
+.tools-list { display: grid; gap: 20px; }
+.tool-item {
+  display: flex; gap: 25px; padding: 25px; border-bottom: 1px solid var(--wsj-border);
+  background: var(--white);
+}
+.tool-icon { font-size: 1.8rem; flex-shrink: 0; }
+.tool-name { font-weight: 800; font-family: var(--font-sans); font-size: 1.15rem; margin-bottom: 5px; }
+.tool-desc { font-size: 0.9rem; color: var(--wsj-gray-med); }
+
+/* BENCHMARK VISUAL */
+.bench-box { margin: 30px 0; }
+.bench-row { margin-bottom: 25px; }
+.bench-label { display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.75rem; margin-bottom: 10px; font-weight: 600; }
+.bench-track { height: 10px; background: #e0e0e0; }
+.bench-fill { height: 100%; background: var(--wsj-blue); transition: width 1.5s ease-in-out; width: 0; }
+.bench-fill.red { background: var(--wsj-red); }
+
+/* NOTE BOX */
+.note-box {
+  background: #fff;
+  border: 1px solid var(--wsj-border);
+  border-left: 6px solid var(--wsj-blue);
+  padding: 30px;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  margin: 40px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+.note-box strong { color: var(--wsj-blue); }
+
+/* TAKEAWAY CARDS */
+.takeaway-card {
+  background: var(--white);
+  border: 1px solid var(--wsj-border);
+  padding: 35px;
+  position: relative;
+  margin-bottom: 25px;
+}
+.takeaway-card::before {
+  content: attr(data-num);
+  position: absolute;
+  top: -18px;
+  left: 30px;
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--wsj-red);
+  background: var(--wsj-gray-light);
+  padding: 0 10px;
+  line-height: 1;
+}
+
+/* REFERENCES */
+.references-list { counter-reset: ref; list-style: none; padding: 0; }
+.references-list li { counter-increment: ref; padding: 14px 0; border-bottom: 1px solid var(--wsj-border); font-size: 0.92rem; line-height: 1.7; }
+.references-list li::before { content: counter(ref) "."; font-family: var(--font-mono); font-weight: 700; color: var(--wsj-red); margin-right: 12px; font-size: 0.85rem; }
+.references-list a { color: var(--wsj-gray-dark); text-decoration: none; border-bottom: 1px solid var(--wsj-border); transition: color 0.2s, border-color 0.2s; }
+.references-list a:hover { color: var(--wsj-blue); border-color: var(--wsj-blue); }
+
+/* FOOTER */
+footer {
+  background: var(--wsj-black);
+  color: var(--white);
+  padding: 100px 0;
+}
+.footer-inner { display: flex; justify-content: space-between; align-items: flex-end; }
+.footer-logo { font-family: var(--font-display); font-size: 2.5rem; font-weight: 900; letter-spacing: -0.04em; }
+.footer-info { font-family: var(--font-mono); font-size: 0.75rem; text-align: right; opacity: 0.7; line-height: 2; }
+
+@media (max-width: 1000px) {
+  .card-grid-2, .card-grid-3 { grid-template-columns: 1fr; }
+  .nav-links { flex-wrap: wrap; justify-content: center; font-size: 0.65rem; }
+  .hero-meta { flex-direction: column; gap: 30px; align-items: center; }
+  .footer-inner { flex-direction: column; align-items: center; gap: 30px; text-align: center; }
+  .container { padding: 0 20px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">THE AI LANDSCAPE</a>
+    <ul class="nav-links">
+      <li><a href="AI_landscape_may2026.html">← Back to May</a></li>
+      <li><a href="#geopolitics">Geopolitics</a></li>
+      <li><a href="#frontier">Frontier Models</a></li>
+      <li><a href="#openweights">Open Weights</a></li>
+      <li><a href="#compute">Compute Crisis</a></li>
+      <li><a href="#ides">Dev IDEs</a></li>
+      <li><a href="#enterprise">Enterprise</a></li>
+      <li><a href="#finance">Finance</a></li>
+      <li><a href="#sales">Sales & Marketing</a></li>
+      <li><a href="#creative">Creative & Design</a></li>
+      <li><a href="#sovereign">Sovereign AI</a></li>
+      <li><a href="#takeaways">Takeaways</a></li>
+      <li><a href="#references">References</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="ticker-wrap">
+  <div class="ticker">
+    <div class="ticker-item">Claude Mythos 5 Export Control <span>→ JUN 12</span></div>
+    <div class="ticker-item">GPT-5.6 Sol, Terra, Luna <span>→ JUN 26 PREVIEW</span></div>
+    <div class="ticker-item">DeepSeek V4-Pro <span>→ 93.5% LIVECODEBENCH</span></div>
+    <div class="ticker-item">Cursor SDK 2.0 <span>→ JUN 5 AGENTIC LAYER</span></div>
+    <div class="ticker-item">Figma Config 2026 <span>→ JUN 23–25 SF</span></div>
+    <div class="ticker-item">Anaplan Agentic Enterprise <span>→ JUN 30</span></div>
+    <div class="ticker-item">NVIDIA RTX Spark <span>→ COMPUTEX 2026</span></div>
+    <div class="ticker-item">EU Code of Practice <span>→ C2PA + WATERMARKING</span></div>
+    <div class="ticker-item">Midjourney Medical FBUCT <span>→ JUN 17</span></div>
+    <div class="ticker-item">MahaCrimeOS AI <span>→ 1100 POLICE STATIONS</span></div>
+    <!-- Loop Clones -->
+    <div class="ticker-item">Claude Mythos 5 Export Control <span>→ JUN 12</span></div>
+    <div class="ticker-item">GPT-5.6 Sol, Terra, Luna <span>→ JUN 26 PREVIEW</span></div>
+    <div class="ticker-item">DeepSeek V4-Pro <span>→ 93.5% LIVECODEBENCH</span></div>
+    <div class="ticker-item">Cursor SDK 2.0 <span>→ JUN 5 AGENTIC LAYER</span></div>
+    <div class="ticker-item">Figma Config 2026 <span>→ JUN 23–25 SF</span></div>
+    <div class="ticker-item">Anaplan Agentic Enterprise <span>→ JUN 30</span></div>
+    <div class="ticker-item">NVIDIA RTX Spark <span>→ COMPUTEX 2026</span></div>
+    <div class="ticker-item">EU Code of Practice <span>→ C2PA + WATERMARKING</span></div>
+    <div class="ticker-item">Midjourney Medical FBUCT <span>→ JUN 17</span></div>
+    <div class="ticker-item">MahaCrimeOS AI <span>→ 1100 POLICE STATIONS</span></div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="container">
+    <div class="hero-eyebrow">June 2026 Monthly Report</div>
+    <h1 class="hero-title">
+      Law, Physics,<br>
+      and the
+      <span class="accent">Reckoning.</span>
+    </h1>
+    <p class="hero-desc">June 2026 was the month the theoretical, boundless promises of the artificial intelligence boom were forced to reconcile with the rigid, unforgiving realities of international law, physical compute limits, and strict corporate compliance.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Events Tracked</span>
+        <span class="meta-value">30+</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Sections</span>
+        <span class="meta-value">11</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Updated</span>
+        <span class="meta-value">Jun 30, 2026</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Works Cited</span>
+        <span class="meta-value">88+</span>
+      </div>
+    </div>
+    <p style="font-family: var(--font-serif); font-size: 1.05rem; max-width: 900px; margin: 40px auto 0; color: var(--wsj-gray-med); line-height: 1.8;">This exhaustive report provides a granular, domain-specific analysis of the technical, commercial, and regulatory developments that exclusively defined the artificial intelligence landscape during June 2026. The defining crisis did not originate from a benchmark or architecture — it came from a federal export control that briefly paralyzed Anthropic's two most powerful models, exposing the fragility of cloud AI infrastructure as critical national security leverage.</p>
+  </div>
+</header>
+
+
+<!-- ============================================================ -->
+<!-- SECTION 1: GEOPOLITICS, REGULATION & EXPORT CONTROLS        -->
+<!-- ============================================================ -->
+<section id="geopolitics">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Section 01 · June 2026</span>
+      <h2 class="section-title">Geopolitics, Regulation <em>&amp; Export Controls</em></h2>
+      <p class="section-sub">The most consequential AI governance event of 2026: federal export controls that briefly paralyzed global frontier model access.</p>
+    </div>
+
+    <div class="alert-box">
+      <strong>BREAKING — June 12, 2026:</strong> The U.S. Commerce Department invoked the Export Administration Regulations (EAR) to suspend access to Claude Fable 5 and Claude Mythos 5 for all foreign nationals, citing severe national security implications. Anthropic implemented a blanket global suspension of both models. Controls were lifted June 30, 2026.
+    </div>
+
+    <!-- The Anthropic Export Control Crisis -->
+    <div class="wide-card">
+      <h3 class="wide-card-title">The Anthropic Export Control Crisis</h3>
+      <p class="card-body">The most consequential and disruptive development of June 2026 was the sudden imposition, and subsequent partial lifting, of export controls on Anthropic's most advanced models. On <strong>June 12, 2026</strong>, the United States Commerce Department invoked the Export Administration Regulations (EAR) to order an immediate suspension of access to Claude Fable 5 and Claude Mythos 5 for all foreign nationals. The directive cited severe national security implications, purportedly linked to a claimed jailbreak involving the models' advanced cybersecurity vulnerabilities and offensive capabilities.</p>
+      <p class="card-body">Because cloud-based API providers possess no reliable mechanism to definitively authenticate the nationality of users in real-time, the directive forced Anthropic into an untenable position. To comply and avoid catastrophic federal penalties, the company implemented a blanket global suspension of both models — effectively shutting down production pipelines for enterprises worldwide that had integrated these models into their autonomous systems.</p>
+      <p class="card-body">The crisis exploited a historically unprecedented application of the <strong>"deemed export" provision</strong>, which restricts the transfer of technology to foreign nationals even if those individuals are physically located within U.S. borders. The Commerce Department successfully weaponized EAR against a digital software service — a loophole that previously allowed foreign entities to rent access to advanced compute without triggering hardware export bans.</p>
+      <p class="card-body">Following intensive behind-the-scenes negotiations and the implementation of heavily classified safeguards, the Commerce Department <strong>withdrew the controls on June 30, 2026</strong>. Anthropic announced the global redeployment of the models starting July 1, with Mythos 5 access restored for a vetted set of domestic organizations under the "Glasswing program." The systemic damage to trust in proprietary cloud APIs, however, was permanent.</p>
+      <div class="chips-row">
+        <span class="chip red">National Security</span>
+        <span class="chip red">EAR / Deemed Export</span>
+        <span class="chip">Glasswing Program</span>
+        <span class="chip">Global Outage</span>
+      </div>
+    </div>
+
+    <!-- Timeline -->
+    <h3 style="font-size:1.6rem; margin:50px 0 20px; border-bottom:2px solid var(--wsj-border); padding-bottom:10px;">Crisis Timeline: June 12–30, 2026</h3>
+    <div class="table-wrap">
+      <table class="editorial-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Event</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>June 2</td><td>Presidential Executive Order on "Promoting Advanced AI Innovation and Security" signed — voluntary 30-day federal review for frontier models</td></tr>
+          <tr><td>June 12</td><td>Commerce Dept. invokes EAR; Fable 5 & Mythos 5 globally suspended. Production pipelines worldwide collapse</td></tr>
+          <tr><td>June 15</td><td>Anthropic simultaneously retires Claude Opus 4 & Sonnet 4 API models; agentic SDK billing split takes effect</td></tr>
+          <tr><td>Late June</td><td>House Committee advances 10 AI-related bills including AI Security and Innovation Act & Protecting Consumers from Deceptive AI Act</td></tr>
+          <tr><td>June 30</td><td>Commerce Dept. lifts controls after classified safeguard implementation. Anthropic announces July 1 redeployment via Glasswing program</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- EU Code of Practice -->
+    <div class="wide-card">
+      <h3 class="wide-card-title">EU Code of Practice: Provenance Infrastructure</h3>
+      <p class="card-body">In stark contrast to the U.S.'s focus on capability suppression, European regulatory action in June 2026 focused meticulously on transparency, consumer protection, and provenance. The European Commission finalized and published the Code of Practice on marking and labeling AI-generated content, serving as a critical compliance mechanism for the incoming AI Act transparency obligations effective <strong>August 2, 2026</strong>.</p>
+      <p class="card-body">The final draft mandated a stringent <strong>"multi-layer approach"</strong> to digital provenance, acknowledging that simple metadata tags are easily stripped. The Code requires three simultaneous mechanisms: machine-readable provenance metadata within the file (C2PA standard), imperceptible digital watermarking designed to survive common manipulations, and centralized logging of generation and modification events.</p>
+      <p class="card-body">In direct response, Google expanded its <strong>SynthID watermarking technology</strong> alongside C2PA Content Credentials across its Gemini platform, Google Search, Chrome, and Pixel hardware lines. By mid-2026, Google reported that SynthID had watermarked over <strong>100 billion images and videos</strong>.</p>
+      <div class="chips-row">
+        <span class="chip">EU AI Act</span>
+        <span class="chip">C2PA Standard</span>
+        <span class="chip">SynthID</span>
+        <span class="chip">Watermarking</span>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <strong>Strategic Implication:</strong> The juxtaposition of the relatively lenient voluntary Executive Order (June 2) with the draconian unilateral export controls (June 12) reveals a paradigm where legislative frameworks lag significantly behind the ad-hoc emergency powers wielded by national security apparatuses. Enterprises can no longer assume uninterrupted, globally consistent access to frontier APIs.
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- SECTION 2: FRONTIER MODELS — OPENAI GPT-5.6                 -->
+<!-- ============================================================ -->
+<section id="frontier">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Section 02 · June 2026</span>
+      <h2 class="section-title">Frontier Models — <em>OpenAI &amp; Anthropic</em></h2>
+      <p class="section-sub">GPT-5.6 Sol, Terra, and Luna debut in a restricted preview; Anthropic executes merciless legacy model retirement.</p>
+    </div>
+
+    <!-- GPT-5.6 -->
+    <div class="wide-card">
+      <h3 class="wide-card-title">OpenAI: The GPT-5.6 Limited Preview</h3>
+      <p class="card-body">On <strong>June 26, 2026</strong>, OpenAI initiated a highly restricted, limited preview of its next-generation family: <strong>GPT-5.6 Sol, Terra, and Luna</strong>. Moving away from parameter-sizing nomenclature, OpenAI adopted a durable, capability-based tiering system. The preview was granted only to a small, hand-selected cohort of trusted enterprise partners and government entities; general availability was withheld.</p>
+      <p class="card-body">On June 12, OpenAI had also permanently deprecated the GPT-5.2 family from ChatGPT, forcing developers using the <code style="font-family:var(--font-mono); background:#f4f4f4; padding:2px 6px;">gpt-5.2-chat-latest</code> endpoint to migrate to GPT-5.5.</p>
+    </div>
+
+    <div class="card-grid card-grid-3" style="margin-bottom:40px;">
+      <article class="card">
+        <div class="card-label">OpenAI · Jun 26, 2026 — Flagship</div>
+        <h3 class="card-title">GPT-5.6 Sol</h3>
+        <p class="card-body">Engineered for complex reasoning, long-horizon coding, deep research, and cybersecurity tasks. Scored <strong>53.6</strong> on the Agents' Last Exam benchmark, significantly outperforming competitors. Contains an "Ultra" reasoning setting for multi-agent parallel workstreams. Restricted due to exceptional vulnerability-detection capabilities.</p>
+        <div class="chips-row">
+          <span class="chip">53.6 Agents' Last Exam</span>
+          <span class="chip">Cybersecurity</span>
+          <span class="chip">Ultra Reasoning</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-label">OpenAI · Jun 26, 2026 — Balanced Default</div>
+        <h3 class="card-title">GPT-5.6 Terra</h3>
+        <p class="card-body">Positioned as the balanced default model for everyday interactive and agentic coding, replacing the standard architecture. Designed for sustained productivity across multi-step developer workflows. Now available in GitHub Copilot as of July 9 GA.</p>
+        <div class="chips-row">
+          <span class="chip">Agentic Coding</span>
+          <span class="chip">Daily Default</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-label">OpenAI · Jun 26, 2026 — Speed Tier</div>
+        <h3 class="card-title">GPT-5.6 Luna</h3>
+        <p class="card-body">The high-speed, cost-efficient variant for high-volume workflows. Optimized for maximum throughput in automated pipelines and continuous integration environments where latency is the binding constraint.</p>
+        <div class="chips-row">
+          <span class="chip">High-Speed</span>
+          <span class="chip">Cost-Efficient</span>
+        </div>
+      </article>
+    </div>
+
+    <div class="wide-card">
+      <h3 class="wide-card-title">GPT-5.6 Benchmark Performance</h3>
+      <div class="bench-box">
+        <div class="bench-row">
+          <div class="bench-label"><span>GPT-5.6 Sol — Agents' Last Exam</span><span>53.6%</span></div>
+          <div class="bench-track"><div class="bench-fill" style="width:0%;" data-target="53.6%"></div></div>
+        </div>
+        <div class="bench-row">
+          <div class="bench-label"><span>GPT-5.6 Sol — Capability-based Cybersecurity Rating</span><span>★ Exceptional</span></div>
+          <div class="bench-track"><div class="bench-fill red" style="width:0%;" data-target="90%"></div></div>
+        </div>
+        <div class="bench-row">
+          <div class="bench-label"><span>Nemotron 3 Ultra — SWE-Bench v5 (Open-Weight)</span><span>81.2%</span></div>
+          <div class="bench-track"><div class="bench-fill" style="width:0%;" data-target="81.2%"></div></div>
+        </div>
+        <div class="bench-row">
+          <div class="bench-label"><span>DeepSeek V4-Pro — LiveCodeBench</span><span>93.5%</span></div>
+          <div class="bench-track"><div class="bench-fill" style="width:0%;" data-target="93.5%"></div></div>
+        </div>
+        <div class="bench-row">
+          <div class="bench-label"><span>GLM-5.2 — GPQA Diamond</span><span>91.2%</span></div>
+          <div class="bench-track"><div class="bench-fill" style="width:0%;" data-target="91.2%"></div></div>
+        </div>
+      </div>
+      <p style="font-family:var(--font-serif); font-size:0.9rem; color:var(--wsj-gray-med); margin-top:10px; margin-bottom:0;">General availability across ChatGPT and the broader API was slated for July 9, 2026. By carefully framing Sol's capabilities as strong in vulnerability detection but restricted from end-to-end autonomous cyberattacks, OpenAI navigated the exact geopolitical tripwires that ensnared Anthropic earlier in the month.</p>
+    </div>
+
+    <!-- Anthropic Model Retirement -->
+    <div class="wide-card">
+      <h3 class="wide-card-title">Anthropic: Model Deprecation &amp; Billing Restructuring</h3>
+      <p class="card-body">Effective <strong>June 15, 2026</strong>, the original Claude Opus 4 and Claude Sonnet 4 models were formally retired from the API. Anthropic enforced a strict transition policy: calls to deprecated model identifiers returned hard failures without any grace period, instantly breaking production applications for teams that had hardcoded these dependencies. Developers were forced to migrate to 4.6, 4.7, or the newly released 4.8 iterations, which introduced default one-million token context windows and adaptive thinking mechanisms.</p>
+      <p class="card-body">Also effective June 15, programmatic workloads executed via the Agent SDK, Claude Code headless modes, GitHub Actions, or third-party automated tools were completely severed from flat-rate interactive subscription limits. They were transitioned to a strict usage-based metering system drawing from predefined monthly credit pools. For example, the Max 5x Plan began providing a <strong>$100 monthly programmatic credit pool</strong>, with no rollover of unused credits.</p>
+      <p class="card-body">This billing split corrected a significant market arbitrage where developers ran high-volume CI pipelines and automated agents on cheap consumer subscription tiers at a massive loss to Anthropic. It signals the maturation of agentic workflows: as autonomous agents generate vastly more tokens than human typists, unmetered flat-rate access is no longer economically viable.</p>
+      <div class="chips-row">
+        <span class="chip red">Hard Retirement — No Grace Period</span>
+        <span class="chip">Usage-Based Billing</span>
+        <span class="chip">1M Token Context</span>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table class="editorial-table">
+        <thead>
+          <tr><th>Model</th><th>June 2026 Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Claude Opus 4.8</td><td>Active — 1M token context, adaptive thinking</td></tr>
+          <tr><td>Claude Opus 4.7</td><td>Active</td></tr>
+          <tr><td>Claude Opus 4.6</td><td>Active</td></tr>
+          <tr><td>Claude Sonnet 4.6 / 4.5</td><td>Active (Sonnet 4.5 deprecation notice issued)</td></tr>
+          <tr><td>Claude Haiku 4.5</td><td>Active</td></tr>
+          <tr><td>Claude Mythos 5 / Fable 5</td><td>SUSPENDED June 12 → Restored July 1 (Glasswing program)</td></tr>
+          <tr><td>Claude Opus 4 (original)</td><td>RETIRED June 15, 2026 — Hard failure on API call</td></tr>
+          <tr><td>Claude Sonnet 4 (original)</td><td>RETIRED June 15, 2026 — Hard failure on API call</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Gemini June Drops -->
+    <div class="wide-card">
+      <h3 class="wide-card-title">Google Gemini: June Drops</h3>
+      <p class="card-body">Google's monthly "Gemini Drops" for June 2026 reinforced its strategy of deploying pervasive, ambient intelligence across both the consumer and professional stack. The June updates significantly expanded Gemini's <strong>"Personal Intelligence"</strong> capabilities globally, allowing the agent to reason deeply across users' private Google Workspace ecosystems — Gmail, Docs, and Drive — to deliver highly contextualized assistance.</p>
+      <div class="tools-list">
+        <div class="tool-item">
+          <span class="tool-icon">🎵</span>
+          <div>
+            <p class="tool-name">Lyria 3 Pro Audio Integration</p>
+            <p class="tool-desc">Mix and customize three-minute, high-fidelity audio tracks directly within the Gemini chat interface at no additional cost.</p>
+          </div>
+        </div>
+        <div class="tool-item">
+          <span class="tool-icon">🍎</span>
+          <div>
+            <p class="tool-name">Native macOS Application</p>
+            <p class="tool-desc">Embeds the Gemini assistant seamlessly into Apple desktop workflows with deep system-level integrations.</p>
+          </div>
+        </div>
+        <div class="tool-item">
+          <span class="tool-icon">🧠</span>
+          <div>
+            <p class="tool-name">Deep-Think Reasoning Modes</p>
+            <p class="tool-desc">New reasoning modes specifically tuned for complex mathematics and coding architectures, alongside interactive visual concept generation tools.</p>
+          </div>
+        </div>
+        <div class="tool-item">
+          <span class="tool-icon">🌍</span>
+          <div>
+            <p class="tool-name">Personal Intelligence — Global Expansion</p>
+            <p class="tool-desc">Cross-user Workspace reasoning expanded globally, allowing Gemini to synthesize context across Gmail, Docs, Drive, and Calendar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- SECTION 3: OPEN-WEIGHT WATERSHED                            -->
+<!-- ============================================================ -->
+<section id="openweights">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Section 03 · June 2026</span>
+      <h2 class="section-title">Open-Weight <em>Watershed</em></h2>
+      <p class="section-sub">June 2026 effectively neutralized the performance gap between open-weight and proprietary frontier models for software engineering and complex reasoning.</p>
+    </div>
+
+    <div class="note-box">
+      <strong>The Open-Weight Moment:</strong> For the first time, open-weight models demonstrated Mixture-of-Experts architectures and highly optimized sparse attention mechanisms capable of matching proprietary frontier APIs for software engineering and complex reasoning tasks. This watershed moment provides enterprises with a non-negotiable geopolitical hedge against cloud API outage risk.
+    </div>
+
+    <div class="table-wrap">
+      <table class="editorial-table">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Developer</th>
+            <th>Parameter Topology</th>
+            <th>Key Benchmark / Capability</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>DeepSeek V4-Pro</td>
+            <td>DeepSeek</td>
+            <td>1.6T MoE (49B active)</td>
+            <td>93.5% on LiveCodeBench — surpasses proprietary Claude and GPT-5.5 iterations</td>
+          </tr>
+          <tr>
+            <td>DeepSeek V4-Flash</td>
+            <td>DeepSeek</td>
+            <td>284B MoE (13B active)</td>
+            <td>First open-weight model to cross the "agentic Rubicon" — reliable enough for enterprise multi-step pipelines</td>
+          </tr>
+          <tr>
+            <td>GLM-5.2</td>
+            <td>Z.ai</td>
+            <td>744B MoE (40B active)</td>
+            <td>91.2% GPQA Diamond — Opus-style portable coding without external cloud connectivity</td>
+          </tr>
+          <tr>
+            <td>MiniMax M3</td>
+            <td>MiniMax</td>
+            <td>Sparse Attention</td>
+            <td>Native video/image context — multimodal long-context leader</td>
+          </tr>
+          <tr>
+            <td>Nemotron 3 Ultra</td>
+            <td>NVIDIA</td>
+            <td>Mixture-of-Transformers</td>
+            <td>81.2% SWE-Bench v5 — leading U.S. open-weight hardware accelerator</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card-grid card-grid-2">
+      <article class="card">
+        <div class="card-label">DeepSeek · June 2026 — Architecture Breakthrough</div>
+        <h3 class="card-title">DeepSeek V4-Pro: Programming Pinnacle</h3>
+        <p class="card-body">Achieved the highest documented scores on highly competitive programming benchmarks like LiveCodeBench and Codeforces, surpassing the proprietary Claude and GPT-5.5 iterations available at the time. The 1.6T parameter MoE architecture with only 49B active parameters per forward pass makes this economically competitive with proprietary APIs at inference time.</p>
+        <div class="chips-row">
+          <span class="chip">93.5% LiveCodeBench</span>
+          <span class="chip">MoE 1.6T / 49B Active</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-label">DeepSeek · June 2026 — The Agentic Rubicon</div>
+        <h3 class="card-title">DeepSeek V4-Flash: Enterprise Agentic Substitute</h3>
+        <p class="card-body">Crossed the critical threshold of being the first open-weight model reliable and inexpensive enough for engineering teams to drop directly into multi-step agentic pipelines as a plausible substitute for Anthropic or OpenAI models. This is the more strategically important release for enterprise architecture: the performance bar has now been met at a cost structure that makes open-weight deployment economically rational.</p>
+        <div class="chips-row">
+          <span class="chip">Agentic Substitute</span>
+          <span class="chip">284B MoE</span>
+        </div>
+      </article>
+    </div>
+
+    <!-- Subquadratic Architecture -->
+    <div class="wide-card" style="margin-top:30px;">
+      <h3 class="wide-card-title">Subquadratic Architecture: The Context Revolution</h3>
+      <p class="card-body">While parameter scaling dominated headlines, the most critical architectural innovation of June 2026 addressed the quadratic compute cost inherent to the standard Transformer's attention mechanism. <strong>Subquadratic AI</strong> launched the highly anticipated API preview of SubQ 1M-Preview, an architecture that maintains linear memory scaling across massive context windows.</p>
+      <p class="card-body">Traditional Transformer models face rigid physical memory ceilings: processing a one-million token context requires roughly <strong>8 interconnected NVIDIA H100 GPUs</strong> solely to house the Key-Value (KV) cache. The Subquadratic architecture mathematically compresses this requirement, allowing a one-million token inference workload to execute efficiently on a <strong>single H200 SXM5 GPU</strong>. A research-gated configuration demonstrated a 12-million token context window operating across just 4–6 H200 GPUs — a scale at which a standard Transformer is practically undeployable.</p>
+      <div class="chips-row">
+        <span class="chip">Linear Memory Scaling</span>
+        <span class="chip">12M Token Context</span>
+        <span class="chip">1× H200 for 1M Tokens</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- SECTION 4: THE AGENTIC COMPUTE SHORTAGE & NVIDIA            -->
+<!-- ============================================================ -->
+<section id="compute">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Section 04 · June 2026</span>
+      <h2 class="section-title">The Agentic Compute <em>Shortage</em></h2>
+      <p class="section-sub">Autonomous agents are consuming 100x–1,000x more tokens than chatbots, precipitating a silent but severe crisis in physical computing infrastructure.</p>
+    </div>
+
+    <div class="wide-card">
+      <h3 class="wide-card-title">Apollo's Report: The Silent Infrastructure Crisis</h3>
+      <p class="card-body">A June 2026 analytical report by Apollo rigorously documented the escalating compute shortage driven by the multiplier effect of agentic token consumption. Traditional LLM interactions involve a human typing, reading, and responding — a slow, gated process consuming relatively small compute. Agentic systems, conversely, utilize high-speed "while-loops": they reason iteratively, execute code, test outputs against compilers, query external tools, and self-correct at machine speed without human intervention.</p>
+      <p class="card-body">This autonomous, continuous looping increases token consumption by a factor of <strong>100x to 1,000x</strong> compared to standard chatbot requests. The digital promise of agentic automation is colliding violently with the unforgiving physical constraints of data center capacity, high-bandwidth memory (HBM) production limits, and regional electricity grids.</p>
+    </div>
+
+    <div class="card-grid card-grid-2" style="margin-bottom: 40px;">
+      <div class="card">
+        <div class="card-label">Human-in-Loop Interaction</div>
+        <h3 class="card-title">Traditional Chat Compute</h3>
+        <p class="card-body">Human types → model responds → human reads → human types next message. Total token consumption governed by human reading and typing speed. Data center can serve thousands of users per GPU.</p>
+        <div class="chips-row"><span class="chip">1× Baseline</span></div>
+      </div>
+      <div class="card">
+        <div class="card-label">Autonomous Agentic Loop</div>
+        <h3 class="card-title">Agentic Compute Demand</h3>
+        <p class="card-body">Agent reasons → executes code → tests output → queries web search → re-plans → iterates at machine speed without any human gating. Token consumption per task is orders of magnitude higher than a chatbot interaction.</p>
+        <div class="chips-row"><span class="chip red">100×–1,000× Multiplier</span></div>
+      </div>
+    </div>
+
+    <!-- NVIDIA Computex -->
+    <div class="wide-card">
+      <h3 class="wide-card-title">NVIDIA at Computex 2026: AI Factories and Edge Acceleration</h3>
+      <p class="card-body">This severe compute reality was the defining theme of NVIDIA's presentations at <strong>Computex 2026</strong> in Taipei during early June. CEO Jensen Huang framed the industry's macroeconomic shift explicitly: <em>"Tokens are now in extraordinary demand. Tokens are now profitable units of revenues... AI is now a GDP generator."</em></p>
+      <p class="card-body">To alleviate the catastrophic strain on centralized data centers, NVIDIA aggressively pushed local hardware acceleration. The company unveiled the <strong>NVIDIA RTX Spark</strong> platform, explicitly designed for thin Windows laptops and compact desktops to run demanding, localized AI workloads without cloud connectivity. The newly announced <strong>DGX Station for Windows</strong> complements RTX Spark for heavier on-premise workloads.</p>
+      <p class="card-body">This strategy distributes the compute burden: RTX Spark and DGX Station handle continuous agentic tasks like code autocomplete and local document retrieval on the edge, while the highly constrained, centralized <strong>Vera Rubin</strong> superchips are reserved strictly for heavy reasoning, massive parallel orchestration, and foundational model training.</p>
+    </div>
+
+    <div class="tools-list">
+      <div class="tool-item">
+        <span class="tool-icon">⚡</span>
+        <div>
+          <p class="tool-name">RTX Spark — Edge Intelligence</p>
+          <p class="tool-desc">Platform for thin Windows laptops and compact desktops. Handles local agentic loops, code autocomplete, and document retrieval without cloud round-trips.</p>
+        </div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">🖥️</span>
+        <div>
+          <p class="tool-name">DGX Station for Windows</p>
+          <p class="tool-desc">On-premise workstation-class inference for demanding agentic pipelines. Bridges the gap between edge devices and centralized AI factories.</p>
+        </div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">🏭</span>
+        <div>
+          <p class="tool-name">Vera Rubin — Centralized Superchip</p>
+          <p class="tool-desc">Reserved for heavy foundational model training, massive parallel agentic orchestration, and complex multi-step reasoning. Token generation directly tied to enterprise revenue.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- SECTION 5: DEVELOPER IDES — CURSOR VS WINDSURF              -->
+<!-- ============================================================ -->
+<section id="ides">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Section 05 · June 2026</span>
+      <h2 class="section-title">Developer IDEs — <em>Cursor vs. Windsurf</em></h2>
+      <p class="section-sub">The software developer tooling landscape underwent a violent structural shift marked by the strategic divergence of the two leading AI Integrated Development Environments.</p>
+    </div>
+
+    <div class="card-grid card-grid-2" style="margin-bottom: 40px;">
+      <article class="card">
+        <div class="card-label">Cognition · June 2, 2026 — Pivot</div>
+        <h3 class="card-title">Windsurf → Devin Desktop</h3>
+        <p class="card-body">Cognition fundamentally pivoted the trajectory of Windsurf, rebranding the IDE as <strong>Devin Desktop</strong> and announcing the end-of-life (effective July 1, 2026) for its popular local agent, Cascade. Cognition essentially abandoned the indie developer IDE market, pivoting to focus exclusively on building an enterprise-scale, cloud-orchestrated "agent-of-record" platform. The indie developer vacuum was immediately filled by Cursor.</p>
+        <div class="chips-row">
+          <span class="chip red">Cascade EOL — Jul 1</span>
+          <span class="chip">Enterprise Pivot</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-label">Cursor · June 5, 2026 — SDK Paradigm Shift</div>
+        <h3 class="card-title">Cursor SDK: Agentic Orchestration Layer</h3>
+        <p class="card-body">Cursor capitalized on Windsurf's market exit by releasing a paradigm-shifting SDK update on June 5. This release elevated Cursor from a sophisticated autocomplete interface into a fully programmable, enterprise-grade agentic orchestration platform. The update introduced three foundational primitives: <strong>Custom Stores, Custom Tools, and Auto-Review Flows</strong>.</p>
+        <div class="chips-row">
+          <span class="chip">Custom Stores</span>
+          <span class="chip">Custom Tools</span>
+          <span class="chip">Auto-Review</span>
+        </div>
+      </article>
+    </div>
+
+    <h3 style="font-size:1.6rem; margin:0 0 20px; border-bottom:2px solid var(--wsj-border); padding-bottom:10px;">The Three Cursor SDK Primitives</h3>
+    <div class="tools-list" style="margin-bottom: 40px;">
+      <div class="tool-item">
+        <span class="tool-icon">🔧</span>
+        <div>
+          <p class="tool-name">Custom Tools</p>
+          <p class="tool-desc">Senior engineers define high-value, repeatable workflows — complex database migrations, generated SDK client updates, observability span injection — as specific tools the agent can invoke and execute autonomously. AI actions are mapped directly onto existing corporate change-management frameworks.</p>
+        </div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">🗄️</span>
+        <div>
+          <p class="tool-name">Custom Stores</p>
+          <p class="tool-desc">Every action taken, tool invoked, and file modified by the agent is logged persistently into infrastructure controlled directly by the enterprise. Total observability is guaranteed — satisfying the strict requirements of CISOs in healthcare and fintech. AI moves from a "rogue productivity hack" to an audited process.</p>
+        </div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-icon">✅</span>
+        <div>
+          <p class="tool-name">Auto-Review Flows</p>
+          <p class="tool-desc">Agent-proposed code changes are automatically gated behind predefined compliance checks and unit tests before any merge is permitted. Agentic coding becomes auditable and compliant by default, turning AI from aspirational to enterprise-deployable.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="wide-card">
+      <h3 class="wide-card-title">Cursor Composer 2.5 &amp; Bugbot Enhancements</h3>
+      <p class="card-body">Concurrently, Cursor upgraded its underlying agent model, Composer 2.5, significantly enhancing its <strong>Bugbot</strong> feature. Bugbot became 3× faster, 22% cheaper, and capable of detecting 10% more bugs, shifting to a usage-based billing model averaging <strong>$1.00–$1.50 per pull request review</strong>. Cursor also deepened its integration capabilities, announcing the inclusion of <strong>xAI's Grok 4.5</strong> for handling difficult, cross-domain logic.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- SECTION 6: ENTERPRISE PLATFORMS & MICROSOFT                 -->
+<!-- ============================================================ -->
+<section id="enterprise">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Section 06 · June 2026</span>
+      <h2 class="section-title">Enterprise Platforms — <em>Microsoft</em></h2>
+      <p class="section-sub">Microsoft executed sweeping, silent updates to its Product Terms that fundamentally tightened legal compliance and licensing guardrails around enterprise AI deployments.</p>
+    </div>
+
+    <div class="wide-card">
+      <h3 class="wide-card-title">Microsoft Product Terms: The Silent Overhaul</h3>
+      <p class="card-body">In June 2026, Microsoft executed sweeping, albeit unannounced, updates to its Product Terms that fundamentally tightened legal compliance and licensing guardrails. Microsoft introduced the overarching <strong>"Microsoft Azure AI Services"</strong> umbrella definition, pulling all direct models and third-party models deployed through the Microsoft Foundry under a single, rigorous compliance framework. The stringent Enterprise AI Services Code of Conduct now contractually binds every model hosted on the platform.</p>
+      <p class="card-body">Microsoft established strict prerequisites for <strong>Agent 365</strong>, its flagship enterprise automation suite. The June terms dictate that customers must possess premium baseline licenses — specifically Microsoft 365 E5, F5 Defender and Purview, or Business Premium — to utilize Agent 365. Lower-tier, ubiquitous licenses like Microsoft 365 E3 are explicitly excluded, forcing mass corporate upgrades for any organization seeking agentic capabilities.</p>
+    </div>
+
+    <div class="card-grid card-grid-3" style="margin-bottom: 40px;">
+      <div class="card">
+        <div class="card-label">Licensing — Agent 365 Prerequisites</div>
+        <h3 class="card-title">License Tier Mandate</h3>
+        <p class="card-body">Microsoft 365 E5, F5 Defender and Purview, or Business Premium required for Agent 365 access. E3 licenses explicitly excluded — forcing enterprise upgrade cycles across the installed base.</p>
+        <div class="chips-row"><span class="chip red">E3 Excluded</span></div>
+      </div>
+      <div class="card">
+        <div class="card-label">Data Privacy — Sweeping New Clause</div>
+        <h3 class="card-title">Cross-Platform Data Authorization</h3>
+        <p class="card-body">A new, highly expansive data privacy clause granted Microsoft explicit authorization to process, ingest, and share data freely between Microsoft 365, Copilot Studio, and the Foundry across the entire Agent 365 ecosystem.</p>
+        <div class="chips-row"><span class="chip">Data Sharing Scope</span></div>
+      </div>
+      <div class="card">
+        <div class="card-label">Copyright — Copilot Studio CCC Change</div>
+        <h3 class="card-title">Copyright Indemnification</h3>
+        <p class="card-body">Microsoft silently stripped Copilot Studio of its "Covered Product" designation under the Customer Copyright Commitment. If an enterprise connects an external model to Copilot Studio, they immediately lose copyright infringement indemnification unless it runs inside Azure OpenAI.</p>
+        <div class="chips-row"><span class="chip red">External Models Unprotected</span></div>
+      </div>
+    </div>
+
+    <div class="wide-card">
+      <h3 class="wide-card-title">Copilot Cowork GA &amp; Office Intelligence</h3>
+      <p class="card-body">Microsoft continued rolling out functional updates alongside the licensing changes: <strong>Copilot Cowork</strong> became generally available, enabling real-time collaborative AI assistance within shared Microsoft 365 documents. New reasoning capabilities were introduced across Word and Excel, allowing the assistant to perform multi-step financial analysis and document synthesis directly within the familiar Office suite interface.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- SECTION 7: FINANCE — ANAPLAN & HEBBIA                       -->
+<!-- ============================================================ -->
+<section id="finance">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Section 07 · June 2026</span>
+      <h2 class="section-title">Finance — <em>Agentic FP&amp;A</em></h2>
+      <p class="section-sub">The Financial Planning and Analysis sector shifted aggressively from basic anomaly detection toward fully automated, multi-system operational execution.</p>
+    </div>
+
+    <div class="wide-card">
+      <h3 class="wide-card-title">Anaplan: The Agentic Enterprise (June 30, 2026)</h3>
+      <p class="card-body">On <strong>June 30, 2026</strong>, Anaplan launched the "Agentic Enterprise," an integrated operational model designed to fundamentally re-engineer core corporate functions including finance, supply chain, human resources, and sales. Anaplan's architecture specifically addresses the cost-prohibitive nature of using large language models as raw mathematical calculation engines.</p>
+      <p class="card-body">The platform pairs the conversational and orchestrating power of advanced LLMs with Anaplan's deterministic, proprietary calculation platform. AI agents autonomously execute data analysis and forward-looking scenario modeling atop a shared, highly auditable data foundation, guaranteeing mathematical accuracy while freeing human financial analysts for strategic decision-making.</p>
+      <div class="chips-row">
+        <span class="chip">LLM + Deterministic Calc Engine</span>
+        <span class="chip">Auditable Data Foundation</span>
+        <span class="chip">Multi-Function Scope</span>
+      </div>
+    </div>
+
+    <div class="wide-card">
+      <h3 class="wide-card-title">Hebbia: June Disclosure 2026 — The Tick-and-Tie Agent</h3>
+      <p class="card-body">Hebbia released its highly anticipated "June Disclosure 2026" updates, deepening agentic integration into institutional finance and legal workflows. The introduction of the <strong>"Tick-and-Tie Agent"</strong> automated the excruciating process of verifying figures in complex financial presentations against underlying source files.</p>
+      <p class="card-body">The agent autonomously extracts every metric from a document and cross-references it page-by-page against reference data, providing an auditable trail of verification. This eliminates hours of manual analyst work on earnings presentations, SEC filings, and board packages.</p>
+      <div class="chips-row">
+        <span class="chip">Automated Verification</span>
+        <span class="chip">Auditable Trail</span>
+        <span class="chip">Institutional Finance</span>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <strong>FP&A Platform Landscape:</strong> Aleph, Datarails, and Pigment increasingly integrated variance detection directly into spreadsheet-native environments in June 2026, proving that domain-specific workflow integration vastly outperforms generalized chatbots for high-stakes financial analysis.
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- SECTION 8: SALES & MARKETING ECOSYSTEMS                     -->
+<!-- ============================================================ -->
+<section id="sales">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Section 08 · June 2026</span>
+      <h2 class="section-title">Sales &amp; Marketing <em>Ecosystems</em></h2>
+      <p class="section-sub">Salesforce Agentforce, HubSpot Breeze AI, and Gong intelligence updates pushed autonomous pipeline management to the enterprise mainstream.</p>
+    </div>
+
+    <div class="card-grid card-grid-2" style="margin-bottom:40px;">
+      <div class="card">
+        <div class="card-label">Salesforce · June 2026</div>
+        <h3 class="card-title">Agentforce: Autonomous Prospecting</h3>
+        <p class="card-body">Salesforce's June 2026 product releases heavily featured Agentforce's dramatically expanded <strong>Prospecting Agent</strong>. The system now autonomously researches CRM signals, scrapes real-time web data, and parses third-party sources like ZoomInfo overnight to deliver highly qualified, ranked hit-lists to sales representatives by morning — fully eliminating manual prospecting research.</p>
+        <div class="chips-row">
+          <span class="chip">Overnight Prospecting</span>
+          <span class="chip">CRM + Web Signals</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-label">HubSpot · June 2026</div>
+        <h3 class="card-title">Breeze AI: Embedded Revenue Intelligence</h3>
+        <p class="card-body">HubSpot's massive June rollout of <strong>Breeze AI</strong> embedded actionable, agentic search results globally across the HubSpot platform and integrated a live HubSpot Agent directly into <strong>Microsoft 365 Copilot</strong>, allowing revenue teams to fetch real-time deal insights without leaving their email or messaging clients.</p>
+        <div class="chips-row">
+          <span class="chip">M365 Copilot Integration</span>
+          <span class="chip">Live Deal Insights</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="wide-card">
+      <h3 class="wide-card-title">Gong: The Adoption Dichotomy</h3>
+      <p class="card-body">Telemetry data from Gong revealed a stark dichotomy in market sentiment in June 2026: while executive rhetoric regarding AI-driven hyper-productivity peaked, macro deployment data showed that only <strong>25% of enterprises had successfully moved 40% or more of their AI pilots into actual production</strong>. The primary bottleneck remains the secure integration of unstructured AI generation into highly structured, deterministic corporate workflows.</p>
+      <p class="card-body">Gong's own June updates introduced granular permission structures segregating 'Manage AI Tracker' and 'Manage Automations' capabilities — indicating that the tooling is finally maturing to meet stringent enterprise governance requirements for the remaining 75% of stalled deployments.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- SECTION 9: CREATIVE TOOLS — FIGMA CONFIG & MIDJOURNEY       -->
+<!-- ============================================================ -->
+<section id="creative">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Section 09 · June 2026</span>
+      <h2 class="section-title">Creative Tools — <em>Figma Config &amp; Midjourney</em></h2>
+      <p class="section-sub">Figma's Config 2026 conference redefined the design stack as a unified creative OS; Midjourney shocked the industry with a hardware division.</p>
+    </div>
+
+    <!-- Figma -->
+    <div class="wide-card">
+      <h3 class="wide-card-title">Figma Config 2026 — June 23–25, San Francisco</h3>
+      <p class="card-body">Figma's annual Config conference was the most structurally disruptive event in the digital design ecosystem in years. CEO Dylan Field utilized the platform to redefine Figma not merely as a UI/UX vector tool, but as a <strong>consolidated operating system for the entire creative stack</strong>. The philosophy: AI has drastically lowered the floor of design, and advanced tooling is required for professionals to raise the ceiling of what is possible.</p>
+    </div>
+
+    <div class="table-wrap">
+      <table class="editorial-table">
+        <thead>
+          <tr>
+            <th>Figma Config 2026 Feature</th>
+            <th>Description &amp; Technical Capability</th>
+            <th>Industry Market Impact</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Figma Motion</td>
+            <td>Native animation timeline and keyframes on canvas. Exports to React/CSS. Agents can prompt-generate keyframes based on design tokens.</td>
+            <td>Cannibalizes After Effects, Rive, Framer</td>
+          </tr>
+          <tr>
+            <td>Code Layers</td>
+            <td>Interactive code functions directly on the canvas. Teams connect GitHub repos, edit code, extract to vector designs, and push commits.</td>
+            <td>Integrates directly with traditional IDEs</td>
+          </tr>
+          <tr>
+            <td>WebGPU Shaders</td>
+            <td>AI-generated parameterized shaders (liquid metal, Moire) executing locally on the GPU via native canvas controls.</td>
+            <td>Replaces specialized Shader Editors</td>
+          </tr>
+          <tr>
+            <td>Weave Tools</td>
+            <td>Deep integration of node-based generative AI workflows into the design panel for style transfer and asset generation.</td>
+            <td>Challenges Midjourney, Canva workflows</td>
+          </tr>
+          <tr>
+            <td>Design Agent Upgrades</td>
+            <td>Agents act as team knowledge systems. Can ingest file attachments, read tokens, query live web data, and connect to GitHub via MCP.</td>
+            <td>Replaces standalone AI chatbots</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note-box">
+      <strong>The MCP Integration:</strong> The deep integration of the Model Context Protocol (MCP) ensures that every complex animation, code layer, and 3D transform generated in Figma can be passed flawlessly as structural context to coding IDEs like Cursor — effectively making the Figma file the final, deployable production codebase.
+    </div>
+
+    <!-- Midjourney -->
+    <div class="wide-card">
+      <h3 class="wide-card-title">Midjourney Medical &amp; the FBUCT Scanner (June 17, 2026)</h3>
+      <p class="card-body">In a highly unorthodox pivot, Midjourney announced the creation of a new hardware division, <strong>Midjourney Medical</strong>, on June 17, 2026. The division unveiled its first product: the <strong>Full Body Ultrasonic Computational Tomography (FBUCT)</strong> scanner — an apparatus utilizing sound waves and warm water baths to generate high-resolution, 3D body composition maps.</p>
+      <p class="card-body">The underlying technology is licensed from Butterfly Network and relies on roughly <strong>500,000 silicon-based ultrasound transducers</strong>. These chips generate terabytes of acoustic data per second, reconstructed into imagery using Midjourney's proprietary AI computational pipelines. Crucially, the image generation represents deterministic reconstruction of physical reality, not the generative hallucination for which the company's art models are known.</p>
+      <p class="card-body">Rather than navigating the arduous FDA diagnostic approval pathway, Midjourney is deploying via the consumer wellness industry. The company announced the construction of a <strong>25,000-sq-ft "Midjourney Spa"</strong> in San Francisco, slated to open in late 2027, where whole-body scanning will be offered alongside saunas and cold plunges. This allows an AI company to commercialize advanced biomedical imaging under the less regulated umbrella of "body-composition analysis" before pursuing formal clinical diagnostic claims.</p>
+      <p class="card-body">In its core software business, Midjourney also made <strong>V8.1 the default model on June 10</strong>, significantly improving prompt adherence and generation speed.</p>
+      <div class="chips-row">
+        <span class="chip">FBUCT Scanner</span>
+        <span class="chip">500K Transducers</span>
+        <span class="chip">Consumer Wellness Strategy</span>
+        <span class="chip">V8.1 Default</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- SECTION 10: SOVEREIGN AI — INDIA                            -->
+<!-- ============================================================ -->
+<section id="sovereign">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Section 10 · June 2026</span>
+      <h2 class="section-title">Sovereign AI — <em>Regional Deployments</em></h2>
+      <p class="section-sub">India's deployments demonstrate how AI is moving from theoretical optimization to ground-level sovereign governance at massive civic scale.</p>
+    </div>
+
+    <div class="wide-card">
+      <h3 class="wide-card-title">MahaCrimeOS AI: Statewide Law Enforcement Deployment</h3>
+      <p class="card-body">Microsoft CEO Satya Nadella announced the massive statewide rollout of <strong>MahaCrimeOS AI to all 1,100 police stations</strong> across Maharashtra. Initially piloted in Nagpur Rural, the platform utilizes Microsoft Foundry and Azure OpenAI to fundamentally accelerate and automate cybercrime investigations.</p>
+      <p class="card-body">Operating primarily in Marathi, the system democratizes advanced investigative capabilities. Investigative tasks that previously required specialized cyber forensic units — OSINT gathering, complex data correlation, drafting legally sound requests to telecommunications companies — can now be executed by standard constabulary in seconds. The system automatically generates case timelines, flags anomalies in financial transaction data, and emails necessary warrants directly.</p>
+      <p class="card-body">This deployment represents one of the most comprehensive, successful integrations of generative AI into a sovereign law enforcement apparatus globally.</p>
+      <div class="chips-row">
+        <span class="chip">1,100 Police Stations</span>
+        <span class="chip">Marathi Language</span>
+        <span class="chip">Azure OpenAI</span>
+        <span class="chip">OSINT Automation</span>
+      </div>
+    </div>
+
+    <div class="card-grid card-grid-2">
+      <div class="card">
+        <div class="card-label">BMC + IIT Kanpur · June 2026</div>
+        <h3 class="card-title">MANAS Air Quality Network</h3>
+        <p class="card-body">The Brihanmumbai Municipal Corporation, in collaboration with IIT Kanpur, finalized the deployment framework for the <strong>MANAS (Maharashtra Air Network for Advanced Sciences)</strong> AI-driven air quality monitoring system. The AI layer predicts pollution micro-airsheds, dynamically cross-references new sensor data against legacy stations to auto-calibrate discrepancies, and prescribes hyper-local civic interventions — shifting urban environmental management from reactive historical reporting to predictive algorithmic control.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Maharashtra State Initiative · June 2026</div>
+        <h3 class="card-title">Compute as a Service (CaaS)</h3>
+        <p class="card-body">Maharashtra launched a <strong>'Compute as a Service'</strong> initiative, provisioning <strong>2,000 GPUs</strong> to local innovators to ensure that the lack of physical hardware does not stifle regional technological development. This initiative directly addresses the agentic compute shortage at the sovereign level, creating a state-managed compute commons for local AI builders.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- SECTION 11: STRATEGIC TAKEAWAYS                             -->
+<!-- ============================================================ -->
+<section id="takeaways">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Section 11 · June 2026</span>
+      <h2 class="section-title">Strategic <em>Takeaways</em></h2>
+      <p class="section-sub">Four irrefutable strategic trajectories established by the cascading events of June 2026.</p>
+    </div>
+
+    <div class="takeaway-card" data-num="01">
+      <h3 style="font-size:1.6rem; margin-bottom:15px;">The End of Sovereign Immunity for Cloud APIs</h3>
+      <p>The Commerce Department's unprecedented use of "deemed export" regulations to temporarily paralyze Anthropic's global deployment of Mythos 5 and Fable 5 permanently alters the enterprise risk model. Multilateral corporations can no longer assume uninterrupted, globally consistent access to proprietary frontier models. The rapid maturation of open-weight models like DeepSeek V4-Pro and GLM-5.2 provides a necessary, non-negotiable geopolitical hedge. Enterprises will aggressively repatriate critical AI workloads to localized, sovereign infrastructure.</p>
+    </div>
+
+    <div class="takeaway-card" data-num="02">
+      <h3 style="font-size:1.6rem; margin-bottom:15px;">The Compute Paradigm Has Inverted</h3>
+      <p>The primary bottleneck to industry growth is no longer raw model intelligence — it is the physical hardware capacity required to sustain continuous agentic loops. The massive token multipliers inherent to autonomous agents are breaking current cloud economics. The industry will rapidly bifurcate: heavy, complex reasoning will occur on centralized super-clusters (Vera Rubin), while continuous operational execution and memory management will be forced onto edge devices and local hardware accelerators (RTX Spark).</p>
+    </div>
+
+    <div class="takeaway-card" data-num="03">
+      <h3 style="font-size:1.6rem; margin-bottom:15px;">Agents Require Auditability, Not Just Autonomy</h3>
+      <p>Critical updates from the Cursor SDK, Microsoft Product Terms, and Anaplan prove that raw AI autonomy is unscalable in corporate environments without strict change-management integration. The winners in the enterprise software ecosystem will not be those with the smartest chatbots, but those who build the most secure, observable "Custom Stores" and deterministic compliance gates around autonomous agentic execution. Only 25% of enterprises have cleared this bar — the remaining 75% represent the primary go-to-market opportunity of H2 2026.</p>
+    </div>
+
+    <div class="takeaway-card" data-num="04">
+      <h3 style="font-size:1.6rem; margin-bottom:15px;">Creative Tools Are Consuming Code</h3>
+      <p>Figma's Config 2026 announcements indicate the complete collapse of the historical boundary between graphic design and front-end software engineering. By embedding interactive Code Layers, WebGPU shaders, and native Motion animation directly into the canvas via AI orchestration, the UI/UX artifact is becoming the final, deployable production codebase. The traditional pipeline from design handoff → developer implementation is being compressed into a single, AI-mediated artifact.</p>
+    </div>
+
+    <div class="note-box" style="margin-top: 40px;">
+      <strong>Final Synthesis:</strong> June 2026 will be recorded as the month the theoretical, boundless promises of the artificial intelligence boom were forced to reconcile with the rigid, unforgiving realities of international law, physical physics, and strict corporate compliance. The era of unbridled capability scaling is over; the era of sovereign, auditable, and physically constrained deployment has begun.
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- SECTION 12: REFERENCES                                      -->
+<!-- ============================================================ -->
+<section id="references">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Works Cited · June 2026</span>
+      <h2 class="section-title">References</h2>
+    </div>
+
+    <ol class="references-list">
+      <li><a href="https://labs.cloudsecurityalliance.org/research/csa-research-note-ai-model-export-controls-enterprise-govern/" target="_blank" rel="noopener">Fable 5 Suspension: Enterprise AI Under Export Controls — Cloud Security Alliance</a></li>
+      <li><a href="https://www.gtlaw-techventureviews.com/2026/06/ai-company-anthropic-suspends-access-to-claude-fable-5-claude-mythos-5-following-us-export-control-directive/" target="_blank" rel="noopener">AI Company Anthropic Suspends Access to Claude Fable 5, Claude Mythos 5 Following US Export Control Directive — GT Law TechVenture Views</a></li>
+      <li><a href="https://www.anthropic.com/news/redeploying-fable-5" target="_blank" rel="noopener">Redeploying Claude Fable 5 — Anthropic</a></li>
+      <li><a href="https://www.reddit.com/r/Tidra/comments/1ulii4f/mythos_5_and_fable_5_are_back_inside_the_first/" target="_blank" rel="noopener">Mythos 5 and Fable 5 Are Back: Inside the First Export-Control Ban of an AI Model — Reddit r/Tidra</a></li>
+      <li><a href="https://samexpert.com/microsoft-product-terms-june-2026/" target="_blank" rel="noopener">Microsoft Product Terms June 2026: What Changed — SAMexpert Blog</a></li>
+      <li><a href="https://www.joinnextdev.com/blog/cursor-sdk-june-2026-custom-tools-stores-auto-review" target="_blank" rel="noopener">Cursor SDK June 2026: Custom Tools, Stores, Auto-Review — Nextdev</a></li>
+      <li><a href="https://www.anaplan.com/news/anaplan-introduces-the-agentic-enterprise/" target="_blank" rel="noopener">Anaplan Introduces the Agentic Enterprise, a Trusted AI-Driven Decision Infrastructure — Anaplan</a></li>
+      <li><a href="https://www.apollo.com/content/dam/apolloaem/documents/insights/the-growing-compute-shortage.pdf" target="_blank" rel="noopener">The Growing Compute Shortage — Apollo Global Management</a></li>
+      <li><a href="https://news.asbis.com/news/press/nvidia-at-computex-2026-new-ai-platforms-for-pcs-workstations-and-ai-factories/" target="_blank" rel="noopener">NVIDIA at COMPUTEX 2026: New AI Platforms for PCs, Workstations and AI Factories</a></li>
+      <li><a href="https://www.crnasia.com/news/2026/components-and-peripherals/three-key-takeaways-from-nvidia-at-computex-2026" target="_blank" rel="noopener">Three key takeaways from NVIDIA at Computex 2026 — CRN Asia</a></li>
+      <li><a href="https://explainx.ai/blog/figma-config-2026-complete-recap-motion-code-shaders-ai-2026" target="_blank" rel="noopener">Figma Config 2026: Complete Recap — Motion, Code, Shaders, AI — explainx.ai</a></li>
+      <li><a href="https://www.piie.com/blogs/realtime-economics/2026/fable-mythos-saga-ad-hoc-us-ai-model-controls-could-help-china" target="_blank" rel="noopener">Fable of the Mythos Saga: Ad hoc US AI Model Controls Could Help China — PIIE</a></li>
+      <li><a href="https://iapp.org/news/a/thought-for-the-week-us-government-order-forces-commercial-suspension-of-two-fronteir-ai-models" target="_blank" rel="noopener">Thought for the Week: US Government Order Forces Commercial Suspension of Two Frontier AI Models — IAPP</a></li>
+      <li><a href="https://www.foxbusiness.com/technology/trump-administration-lifts-claude-mythos-5-fable-5-export-restrictions-after-anthropic-works-government" target="_blank" rel="noopener">Trump Administration Lifts Claude Mythos 5, Fable 5 Export Restrictions — Fox Business</a></li>
+      <li><a href="https://ballotpedia.org/The_Checks_and_Balances_Letter:_June_2026" target="_blank" rel="noopener">The Checks and Balances Letter: June 2026 — Ballotpedia</a></li>
+      <li><a href="https://medium.com/@symprioblog/frontier-ai-is-going-private-build-responsibly-30e8550ff878" target="_blank" rel="noopener">Frontier AI Is Going Private — Build Responsibly — Medium / Symprio Blogs</a></li>
+      <li><a href="https://kureansiklopedi.com/en/detay/decree-on-promoting-advanced-artificial-intelligen" target="_blank" rel="noopener">Decree on Promoting Advanced Artificial Intelligence Innovation and Security (2026)</a></li>
+      <li><a href="https://www.techpolicy.press/june-2026-us-tech-policy-roundup/" target="_blank" rel="noopener">June 2026 US Tech Policy Roundup — TechPolicy.Press</a></li>
+      <li><a href="https://digital-strategy.ec.europa.eu/en/news/commission-publishes-code-practice-marking-and-labelling-ai-generated-content" target="_blank" rel="noopener">Commission Publishes Code of Practice on Marking and Labelling AI-Generated Content — European Commission</a></li>
+      <li><a href="https://www.jonesday.com/en/insights/2026/06/european-commission-publishes-final-code-of-practice-on-marking-and-labelling-aigenerated-content" target="_blank" rel="noopener">European Commission Publishes Final Code of Practice on Marking and Labelling AI-Generated Content — Jones Day</a></li>
+      <li><a href="https://artificialintelligenceact.eu/transparency-rules-article-50/" target="_blank" rel="noopener">The EU AI Act's Transparency Rules: A Practical Guide to Article 50</a></li>
+      <li><a href="https://truescreen.io/articles/c2pa-standard-history-limitations/" target="_blank" rel="noopener">What Is the C2PA Standard? How It Works and Its Limits — TrueScreen</a></li>
+      <li><a href="https://www.freshfields.com/en/our-thinking/blogs/technology-quotient/eu-ai-act-unpacked-33-the-final-code-of-practice-on-transparency-of-ai-generate-102n4yx" target="_blank" rel="noopener">EU AI Act Unpacked #33: The Final Code of Practice on Transparency — Freshfields</a></li>
+      <li><a href="https://aibuzz.blog/ai-watermarking-vs-metadata-vs-fingerprinting/" target="_blank" rel="noopener">AI Watermarking 2026: C2PA, Metadata and Fingerprinting — AI Buzz</a></li>
+      <li><a href="https://blog.google/innovation-and-ai/products/identifying-ai-generated-media-online/" target="_blank" rel="noopener">Making it Easier to Understand How Content Was Created and Edited — Google Blog</a></li>
+      <li><a href="https://www.truth-check.com/blog/synthid-google-filigrane-ia-2026" target="_blank" rel="noopener">Google SynthID: What the Invisible AI Watermark Really Detects (2026) — Truth-Check</a></li>
+      <li><a href="https://enterprisedna.co/resources/news/openai-gpt52-retirement-gpt55-model-lifecycle-2026/" target="_blank" rel="noopener">OpenAI Retires GPT-5.2: What Businesses Need to Know — Enterprise DNA</a></li>
+      <li><a href="https://developers.openai.com/api/docs/changelog" target="_blank" rel="noopener">Changelog — OpenAI API</a></li>
+      <li><a href="https://medium.com/@ai_93276/gpt-5-6-took-thirteen-days-to-move-from-restricted-preview-to-general-availability-45aa86ada96f" target="_blank" rel="noopener">GPT-5.6 Took Thirteen Days to Move From Restricted Preview to General Availability — Medium</a></li>
+      <li><a href="https://openai.com/index/previewing-gpt-5-6-sol/" target="_blank" rel="noopener">Previewing GPT-5.6 Sol: A Next-Generation Model — OpenAI</a></li>
+      <li><a href="https://help.openai.com/en/articles/20001354-gpt-56-in-chatgpt" target="_blank" rel="noopener">GPT-5.6 in ChatGPT — OpenAI Help Center</a></li>
+      <li><a href="https://github.blog/changelog/2026-07-09-openais-gpt-5-6-sol-terra-and-luna-are-now-available-in-github-copilot/" target="_blank" rel="noopener">OpenAI's GPT-5.6 Sol, Terra, and Luna Are Now Available in GitHub Copilot</a></li>
+      <li><a href="https://www.coderabbit.ai/blog/gpt-5-6-sol-and-terra-benchmark" target="_blank" rel="noopener">OpenAI GPT-5.6 Sol and Terra: Benchmark — CodeRabbit</a></li>
+      <li><a href="https://mashable.com/tech/openai-gpt-5-6-sol-public-release" target="_blank" rel="noopener">OpenAI's GPT-5.6 Finally Set for Public Release After Delays — Mashable</a></li>
+      <li><a href="https://deploymentsafety.openai.com/gpt-5-6-preview" target="_blank" rel="noopener">GPT-5.6 Preview System Card — OpenAI Deployment Safety Hub</a></li>
+      <li><a href="https://www.startuphub.ai/ai-news/artificial-intelligence/2026/openai-launches-gpt-5-6-sol-leads-charge" target="_blank" rel="noopener">OpenAI Launches GPT-5.6, Sol Leads Charge — StartupHub</a></li>
+      <li><a href="https://m.economictimes.com/news/international/business/openai-gpt-5-6-rollout-begins-july-9-new-features-models-and-everything-else-to-know/articleshow/132257449.cms" target="_blank" rel="noopener">OpenAI GPT-5.6 Rollout Begins July 9 — Economic Times</a></li>
+      <li><a href="https://www.notebookcheck.net/OpenAI-GPT-5-6-is-here-Sol-Terra-and-Luna-now-available.1340205.0.html" target="_blank" rel="noopener">OpenAI GPT-5.6 Is Here: Sol, Terra and Luna Now Available — NotebookCheck</a></li>
+      <li><a href="https://enterprisedna.co/resources/news/anthropic-claude-june-15-retirements-billing-2026/" target="_blank" rel="noopener">Claude Sonnet 4 Migration Guide: API Retirement June 15 — Enterprise DNA</a></li>
+      <li><a href="https://www.reddit.com/r/claudexplorers/comments/1tz1tus/upcoming_api_retirements_claude_opus_4_claude/" target="_blank" rel="noopener">Upcoming API Retirements: Claude Opus 4, Claude Opus 4.1 — Reddit r/claudexplorers</a></li>
+      <li><a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener">Model Deprecations — Claude Platform Docs</a></li>
+      <li><a href="https://usagebox.com/articles/anthropic-june-15-agent-sdk-credit-split-claude-4-retirement" target="_blank" rel="noopener">Anthropic's June 15 Double Hit: Agent SDK Leaves Your Subscription, Claude 4 Retires — UsageBox</a></li>
+      <li><a href="https://kilo.ai/open-source-models" target="_blank" rel="noopener">Best Open-Source & Open-Weight AI Coding Models in 2026 — Kilo Code</a></li>
+      <li><a href="https://www.reddit.com/r/LocalLLaMA/comments/1ukorvr/open_models_june_2026/" target="_blank" rel="noopener">Open Models — June 2026 — Reddit r/LocalLLaMA</a></li>
+      <li><a href="https://openrouter.ai/blog/insights/the-open-weight-models-that-matter-june-2026/" target="_blank" rel="noopener">The Open Weight Models That Matter: June 2026 — OpenRouter Blog</a></li>
+      <li><a href="https://www.thundercompute.com/blog/best-open-source-llms" target="_blank" rel="noopener">Best Open Source LLMs (July 2026) — Thunder Compute</a></li>
+      <li><a href="https://www.gumloop.com/blog/open-weight-ai-models" target="_blank" rel="noopener">7 Best Open Weight AI Models I've Tested in 2026 — Gumloop</a></li>
+    </ol>
+
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- FOOTER                                                       -->
+<!-- ============================================================ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">THE AI LANDSCAPE</div>
+      <div class="footer-info">
+        <div><a href="AI_landscape_may2026.html" style="color:var(--wsj-blue); text-decoration:underline;">← MAY 2026 REPORT</a></div>
+        <div><a href="index.html" style="color:var(--wsj-border); text-decoration:underline;">HOME</a></div>
+        <div>UPDATED JUNE 30, 2026</div>
+        <div>DATA SOURCE: PUBLIC MODEL RELEASES &amp; CITED SOURCES</div>
+        <div>© 2026 MONTHLY REPORT. SAI SRIKIRAN J.</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Benchmark fill animation via IntersectionObserver
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.querySelectorAll('.bench-fill').forEach(bar => {
+        const target = bar.getAttribute('data-target') || '0%';
+        bar.style.width = target;
+      });
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.bench-box').forEach(box => observer.observe(box));
+</script>
+
+</body>
+</html>
