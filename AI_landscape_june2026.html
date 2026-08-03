@@ -59,11 +59,7 @@ nav {
   background: var(--white);
   border-bottom: 2px solid var(--wsj-black);
   padding: 15px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  transition: padding 0.3s ease, box-shadow 0.3s ease;
-}
+  }
 .nav-inner {
   display: flex;
   flex-direction: column;
@@ -79,8 +75,7 @@ nav {
   color: var(--wsj-black);
   letter-spacing: -0.04em;
   margin-bottom: 12px;
-  transition: margin-bottom 0.3s ease, font-size 0.3s ease;
-}
+  }
 .nav-links {
   display: flex;
   gap: 20px;
@@ -90,11 +85,7 @@ nav {
   width: 100%;
   justify-content: center;
   flex-wrap: wrap;
-  max-height: 200px;
-  opacity: 1;
-  overflow: hidden;
-  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease, padding 0.3s ease, border-color 0.3s ease;
-}
+  }
 .nav-links a {
   font-family: var(--font-sans);
   font-size: 0.75rem;
@@ -107,22 +98,7 @@ nav {
 }
 .nav-links a:hover { color: var(--wsj-blue); }
 
-/* SCROLLED COLLAPSE STATE */
-nav.scrolled {
-  padding: 10px 0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-}
-nav.scrolled .nav-logo {
-  margin-bottom: 0;
-  font-size: 1.8rem;
-}
-nav.scrolled .nav-links {
-  max-height: 0;
-  opacity: 0;
-  padding: 0;
-  border-top-color: transparent;
-  pointer-events: none;
-}
+
 
 /* TICKER */
 .ticker-wrap {
@@ -1233,13 +1209,6 @@ footer {
 </footer>
 
 <script>
-// Toggle nav collapse on scroll
-window.addEventListener('scroll', () => {
-  const nav = document.querySelector('nav');
-  if (nav) {
-    nav.classList.toggle('scrolled', window.scrollY > 40);
-  }
-}, { passive: true });
 
 // Benchmark fill animation via IntersectionObserver
 const observer = new IntersectionObserver((entries) => {

@@ -59,11 +59,7 @@ nav {
   background: var(--white);
   border-bottom: 2px solid var(--wsj-black);
   padding: 15px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  transition: padding 0.3s ease, box-shadow 0.3s ease;
-}
+  }
 .nav-inner {
   display: flex;
   flex-direction: column;
@@ -79,8 +75,7 @@ nav {
   color: var(--wsj-black);
   letter-spacing: -0.04em;
   margin-bottom: 12px;
-  transition: margin-bottom 0.3s ease, font-size 0.3s ease;
-}
+  }
 .nav-links {
   display: flex;
   gap: 20px;
@@ -90,11 +85,7 @@ nav {
   width: 100%;
   justify-content: center;
   flex-wrap: wrap;
-  max-height: 200px;
-  opacity: 1;
-  overflow: hidden;
-  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease, padding 0.3s ease, border-color 0.3s ease;
-}
+  }
 .nav-links a {
   font-family: var(--font-sans);
   font-size: 0.75rem;
@@ -107,22 +98,7 @@ nav {
 }
 .nav-links a:hover { color: var(--wsj-blue); }
 
-/* SCROLLED COLLAPSE STATE */
-nav.scrolled {
-  padding: 10px 0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-}
-nav.scrolled .nav-logo {
-  margin-bottom: 0;
-  font-size: 1.8rem;
-}
-nav.scrolled .nav-links {
-  max-height: 0;
-  opacity: 0;
-  padding: 0;
-  border-top-color: transparent;
-  pointer-events: none;
-}
+
 
 /* TICKER */
 .ticker-wrap {
@@ -405,9 +381,9 @@ footer {
 
     <div class="wide-card">
       <h3 class="wide-card-title">The Structural Shift: Optimizing the Denominator</h3>
-      <p class="card-body">The month of July 2026 represented a structural inflection point in the global artificial intelligence sector. Characterized by an unprecedented density of frontier model releases, paradigm-shifting hardware deployments, and aggressive regulatory realignments, the AI landscape transitioned from theoretical capability demonstration to rigorous, cost-optimized enterprise deployment <sup><a href="#ref-1">[1]</a></sup>.</p>
-      <p class="card-body">The defining theme of July 2026 was the optimization of the <strong>"denominator"</strong> — the computational and financial cost required to generate a useful output <sup><a href="#ref-1">[1]</a></sup>. Industry leaders recognized that while raw intelligence remains a critical vector, commercial viability now depends heavily on token efficiency, latency, and the ability to orchestrate complex, multi-step agentic workflows without excessive human intervention <sup><a href="#ref-1">[1]</a></sup>.</p>
-      <p class="card-body">Concurrently, the physical infrastructure supporting these models underwent a radical transformation. The introduction and massive deployment of rack-scale, liquid-cooled supercomputers (such as the NVIDIA GB300 NVL72) redefined the thermodynamic and spatial requirements of modern data centers <sup><a href="#ref-2">[2]</a></sup>. These hardware shifts unfolded against a backdrop of severe regulatory fragmentation, where the EU established an intricate penalty-heavy compliance matrix, the U.S. grappled with a state-level patchwork, and emerging economies like India aggressively funded sovereign infrastructure <sup><a href="#ref-4">[4]</a>, <a href="#ref-6">[6]</a></sup>.</p>
+      <p class="card-body">The month of July 2026 represented a structural inflection point in the global artificial intelligence sector. Characterized by an unprecedented density of frontier model releases, paradigm-shifting hardware deployments, and aggressive regulatory realignments, the AI landscape transitioned from theoretical capability demonstration to rigorous, cost-optimized enterprise deployment.</p>
+      <p class="card-body">The defining theme of July 2026 was the optimization of the <strong>"denominator"</strong> — the computational and financial cost required to generate a useful output. Industry leaders recognized that while raw intelligence remains a critical vector, commercial viability now depends heavily on token efficiency, latency, and the ability to orchestrate complex, multi-step agentic workflows without excessive human intervention.</p>
+      <p class="card-body">Concurrently, the physical infrastructure supporting these models underwent a radical transformation. The introduction and massive deployment of rack-scale, liquid-cooled supercomputers (such as the NVIDIA GB300 NVL72) redefined the thermodynamic and spatial requirements of modern data centers. These hardware shifts unfolded against a backdrop of severe regulatory fragmentation, where the EU established an intricate penalty-heavy compliance matrix, the U.S. grappled with a state-level patchwork, and emerging economies like India aggressively funded sovereign infrastructure.</p>
       <div class="chips-row">
         <span class="chip red">Cost-Optimization</span>
         <span class="chip red">Token Efficiency</span>
@@ -433,18 +409,18 @@ footer {
     <!-- 2.1 Anthropic Opus 5 & Fable 5 -->
     <div class="wide-card">
       <h3 class="wide-card-title">2.1 Anthropic's Strategic Saturation: Claude Opus 5 &amp; Fable 5</h3>
-      <p class="card-body">Anthropic executed a highly aggressive product strategy, releasing <strong>Claude Opus 5 on July 24, 2026</strong>. This marked the organization's fourth major deployment in under two months, following Mythos 5, Fable 5, and Sonnet 5 <sup><a href="#ref-1">[1]</a></sup>. Positioned as the default "workhorse tier" on Claude Max, Opus 5 disrupted the evaluation ecosystem, securing top position on Artificial Analysis's newly rebased Intelligence Index v4.1 with a score of <strong>61</strong>, and leading the Agentic Index at <strong>55.37</strong> <sup><a href="#ref-1">[1]</a>, <a href="#ref-7">[7]</a></sup>. The v4.1 index rebased the entire scale to account for benchmark saturation <sup><a href="#ref-7">[7]</a></sup>. Opus 5 achieved this at <strong>$5 per million input tokens</strong> and <strong>$25 per million output tokens</strong> — half the cost of Fable 5 <sup><a href="#ref-1">[1]</a></sup>.</p>
-      <p class="card-body">A key innovation in Opus 5 is <strong>adaptive thinking by default</strong>, dynamically allocating compute via a five-level effort setting across a 1-million-token context window and 128k output capacity <sup><a href="#ref-1">[1]</a></sup>. In hands-on testing on a "Poisoned Test Suite" (debugging code with contradictory assertions), Opus 5 exhibited disciplined coding by using strict data types and proper exceptions rather than artificial skip commands <sup><a href="#ref-1">[1]</a></sup>. In long-horizon travel planning with an inadequate budget, it displayed intellectual honesty, pushing back on impossible constraints rather than fabricating unrealistic compliant schedules <sup><a href="#ref-1">[1]</a></sup>.</p>
+      <p class="card-body">Anthropic executed a highly aggressive product strategy, releasing <strong>Claude Opus 5 on July 24, 2026</strong>. This marked the organization's fourth major deployment in under two months, following Mythos 5, Fable 5, and Sonnet 5. Positioned as the default "workhorse tier" on Claude Max, Opus 5 disrupted the evaluation ecosystem, securing top position on Artificial Analysis's newly rebased Intelligence Index v4.1 with a score of <strong>61</strong>, and leading the Agentic Index at <strong>55.37</strong>. The v4.1 index rebased the entire scale to account for benchmark saturation. Opus 5 achieved this at <strong>$5 per million input tokens</strong> and <strong>$25 per million output tokens</strong> — half the cost of Fable 5.</p>
+      <p class="card-body">A key innovation in Opus 5 is <strong>adaptive thinking by default</strong>, dynamically allocating compute via a five-level effort setting across a 1-million-token context window and 128k output capacity. In hands-on testing on a "Poisoned Test Suite" (debugging code with contradictory assertions), Opus 5 exhibited disciplined coding by using strict data types and proper exceptions rather than artificial skip commands. In long-horizon travel planning with an inadequate budget, it displayed intellectual honesty, pushing back on impossible constraints rather than fabricating unrealistic compliant schedules.</p>
       
       <div class="alert-box">
-        <strong>Fable 5 Regulatory Engineering:</strong> On July 1, Anthropic restored public access to Claude Fable 5 following its June 12 export-control suspension <sup><a href="#ref-1">[1]</a></sup>. Fable 5 returned governed by a leaked 3,826-line XML system prompt containing strict "Duty of Care" protocols <sup><a href="#ref-1">[1]</a></sup>. The prompt forbids mental-health diagnoses, restricts self-harm advice, bans reflective listening that amplifies user distress, and mandates real-time classifiers that reroute high-risk biological/cyber queries to Opus 4.8 <sup><a href="#ref-1">[1]</a></sup>.
+        <strong>Fable 5 Regulatory Engineering:</strong> On July 1, Anthropic restored public access to Claude Fable 5 following its June 12 export-control suspension. Fable 5 returned governed by a leaked 3,826-line XML system prompt containing strict "Duty of Care" protocols. The prompt forbids mental-health diagnoses, restricts self-harm advice, bans reflective listening that amplifies user distress, and mandates real-time classifiers that reroute high-risk biological/cyber queries to Opus 4.8.
       </div>
     </div>
 
     <!-- 2.2 OpenAI GPT-5.6 Family -->
     <div class="wide-card">
       <h3 class="wide-card-title">2.2 OpenAI's Generational Shift: The GPT-5.6 Family</h3>
-      <p class="card-body">On <strong>July 9, OpenAI moved the GPT-5.6 family into general availability</strong> following a restricted June 26 government-vetted preview <sup><a href="#ref-1">[1]</a></sup>. OpenAI stratified a single base training run into three distinct, durable capability tiers: <strong>Sol, Terra, and Luna</strong> <sup><a href="#ref-1">[1]</a></sup>.</p>
+      <p class="card-body">On <strong>July 9, OpenAI moved the GPT-5.6 family into general availability</strong> following a restricted June 26 government-vetted preview. OpenAI stratified a single base training run into three distinct, durable capability tiers: <strong>Sol, Terra, and Luna</strong>.</p>
 
       <div class="table-wrap">
         <table class="editorial-table">
@@ -482,7 +458,7 @@ footer {
           </tbody>
         </table>
       </div>
-      <p class="card-body">All three tiers feature a 1-million-token context window, 128k output threshold, and knowledge cutoff of February 2026 <sup><a href="#ref-1">[1]</a></sup>. OpenAI also deployed explicit context caching: minimum 30-minute cache life, cache writes billed at +25% premium, and cache reads granted a massive <strong>90% discount</strong> <sup><a href="#ref-1">[1]</a></sup>.</p>
+      <p class="card-body">All three tiers feature a 1-million-token context window, 128k output threshold, and knowledge cutoff of February 2026. OpenAI also deployed explicit context caching: minimum 30-minute cache life, cache writes billed at +25% premium, and cache reads granted a massive <strong>90% discount</strong>.</p>
     </div>
 
     <!-- 2.3 & 2.4 Grid -->
@@ -490,8 +466,8 @@ footer {
       <article class="card">
         <div class="card-label">Google &amp; xAI · July 2026</div>
         <h3 class="card-title">2.3 Efficiency: Gemini 3.6 Flash &amp; Grok 4.5</h3>
-        <p class="card-body"><strong>Gemini 3.6 Flash</strong> (July 21) achieved a 17% average reduction in output tokens per task (up to 65% on coding) while maintaining composite intelligence at $1.50 in / $7.50 out per 1M <sup><a href="#ref-1">[1]</a></sup>. Retains 1M context, March 2026 cutoff, and exceptional vision discipline on truncated charts <sup><a href="#ref-1">[1]</a></sup>.<br><br>
-        <strong>Grok 4.5</strong> (July 8) is a 975B MoE model (41B active) trained on 45T tokens, co-trained with Cursor <sup><a href="#ref-1">[1]</a></sup>. Operating at 80 t/s, it resolved benchmarks using only 15,954 output tokens (vs 67,020 for Opus 4.8) at $2.00 in / $6.00 out per 1M <sup><a href="#ref-1">[1]</a></sup>.</p>
+        <p class="card-body"><strong>Gemini 3.6 Flash</strong> (July 21) achieved a 17% average reduction in output tokens per task (up to 65% on coding) while maintaining composite intelligence at $1.50 in / $7.50 out per 1M. Retains 1M context, March 2026 cutoff, and exceptional vision discipline on truncated charts.<br><br>
+        <strong>Grok 4.5</strong> (July 8) is a 975B MoE model (41B active) trained on 45T tokens, co-trained with Cursor. Operating at 80 t/s, it resolved benchmarks using only 15,954 output tokens (vs 67,020 for Opus 4.8) at $2.00 in / $6.00 out per 1M.</p>
         <div class="chips-row">
           <span class="chip">Token Efficiency</span>
           <span class="chip">Grok 4.5 (80 t/s)</span>
@@ -502,8 +478,8 @@ footer {
       <article class="card">
         <div class="card-label">Alibaba · July 21, 2026</div>
         <h3 class="card-title">2.4 Multimodal Utility: Qwen-Image-3.0</h3>
-        <p class="card-body">Alibaba released <strong>Qwen-Image-3.0</strong>, prioritizing utilitarian graphic layout over artistic aesthetics <sup><a href="#ref-1">[1]</a></sup>. Accepting prompts up to 4,500 tokens (4.5x previous), it renders dense multi-panel academic pages with mathematical notation and legible typography down to 10 pixels across 12 languages and 20+ fonts <sup><a href="#ref-1">[1]</a></sup>.<br><br>
-        Uniquely, it ingests live web data directly into graphics, though Alibaba shipped the model without benchmark tables, parameter counts, or downloadable weights <sup><a href="#ref-1">[1]</a></sup>.</p>
+        <p class="card-body">Alibaba released <strong>Qwen-Image-3.0</strong>, prioritizing utilitarian graphic layout over artistic aesthetics. Accepting prompts up to 4,500 tokens (4.5x previous), it renders dense multi-panel academic pages with mathematical notation and legible typography down to 10 pixels across 12 languages and 20+ fonts.<br><br>
+        Uniquely, it ingests live web data directly into graphics, though Alibaba shipped the model without benchmark tables, parameter counts, or downloadable weights.</p>
         <div class="chips-row">
           <span class="chip">4500-Token Prompts</span>
           <span class="chip">10px Typography</span>
@@ -530,8 +506,8 @@ footer {
       <article class="card">
         <div class="card-label">Thinking Machines Lab · July 15, 2026</div>
         <h3 class="card-title">3.1 Thinking Machines' Inkling</h3>
-        <p class="card-body">Directed by Mira Murati, Thinking Machines released <strong>Inkling</strong> under Apache 2.0 <sup><a href="#ref-1">[1]</a></sup>. A 975B total / 41B active parameter MoE model trained on 45T tokens, Inkling features learned relative positional embeddings, hybrid local (5 window) and global (1) attention, short conv layers, and multi-token prediction <sup><a href="#ref-1">[1]</a></sup>.<br><br>
-        Inkling includes autonomous self-fine-tuning via the Tinker platform, which synthesizes data and writes eval logic independently <sup><a href="#ref-1">[1]</a></sup>. Inkling-Small (276B total / 12B active) was released concurrently <sup><a href="#ref-1">[1]</a></sup>.</p>
+        <p class="card-body">Directed by Mira Murati, Thinking Machines released <strong>Inkling</strong> under Apache 2.0. A 975B total / 41B active parameter MoE model trained on 45T tokens, Inkling features learned relative positional embeddings, hybrid local (5 window) and global (1) attention, short conv layers, and multi-token prediction.<br><br>
+        Inkling includes autonomous self-fine-tuning via the Tinker platform, which synthesizes data and writes eval logic independently. Inkling-Small (276B total / 12B active) was released concurrently.</p>
         <div class="chips-row">
           <span class="chip">Apache 2.0</span>
           <span class="chip">975B MoE</span>
@@ -542,8 +518,8 @@ footer {
       <article class="card">
         <div class="card-label">Moonshot AI · July 16–26, 2026</div>
         <h3 class="card-title">3.2 Kimi K3: Trillion-Parameter Shockwave</h3>
-        <p class="card-body">Moonshot launched <strong>Kimi K3</strong> via API on July 16 and published full open weights on July 26 under a Modified MIT license <sup><a href="#ref-1">[1]</a></sup>. Boasting <strong>2.8 Trillion total parameters</strong> (104B active) and a 1M token context, K3 is the largest open model in history <sup><a href="#ref-1">[1]</a></sup>.<br><br>
-        K3 dominated blind arena evals in agentic coding, triggering a stock selloff in proprietary API vendors (Z.ai -30%, MiniMax -16%, Alibaba -4%) while Moonshot's daily revenue surged 6x <sup><a href="#ref-1">[1]</a></sup>. Requiring ~1.4 TB RAM in 4-bit (min 64 accelerators), self-hosting remains restricted to large enterprise clouds <sup><a href="#ref-1">[1]</a></sup>.</p>
+        <p class="card-body">Moonshot launched <strong>Kimi K3</strong> via API on July 16 and published full open weights on July 26 under a Modified MIT license. Boasting <strong>2.8 Trillion total parameters</strong> (104B active) and a 1M token context, K3 is the largest open model in history.<br><br>
+        K3 dominated blind arena evals in agentic coding, triggering a stock selloff in proprietary API vendors (Z.ai -30%, MiniMax -16%, Alibaba -4%) while Moonshot's daily revenue surged 6x. Requiring ~1.4 TB RAM in 4-bit (min 64 accelerators), self-hosting remains restricted to large enterprise clouds.</p>
         <div class="chips-row">
           <span class="chip red">2.8T Parameters</span>
           <span class="chip red">Market Shockwave</span>
@@ -591,7 +567,7 @@ footer {
       <article class="card">
         <div class="card-label">OpenAI · July 2026</div>
         <h3 class="card-title">4.1 ChatGPT Work</h3>
-        <p class="card-body">OpenAI launched <strong>ChatGPT Work</strong>, an embedded agent designed for multi-hour enterprise projects <sup><a href="#ref-10">[10]</a></sup>. Gathering data across user applications, it independently compiles spreadsheets, slide decks, docs, and web applications <sup><a href="#ref-10">[10]</a></sup>. Integrated with Codex (5M+ weekly users), it executes complex multi-step digital labor across web, mobile, and desktop environments <sup><a href="#ref-10">[10]</a></sup>.</p>
+        <p class="card-body">OpenAI launched <strong>ChatGPT Work</strong>, an embedded agent designed for multi-hour enterprise projects. Gathering data across user applications, it independently compiles spreadsheets, slide decks, docs, and web applications. Integrated with Codex (5M+ weekly users), it executes complex multi-step digital labor across web, mobile, and desktop environments.</p>
         <div class="chips-row">
           <span class="chip">Multi-Hour Projects</span>
           <span class="chip">Codex Integration</span>
@@ -601,8 +577,8 @@ footer {
       <article class="card">
         <div class="card-label">Perplexity &amp; Canva · July 2026</div>
         <h3 class="card-title">4.2 Comet &amp; Canva Code 2.0</h3>
-        <p class="card-body">Perplexity introduced <strong>Comet</strong>, a Chromium-based AI browser for Max subscribers featuring native page summarization and cross-tab execution <sup><a href="#ref-10">[10]</a></sup>.<br><br>
-        Canva rolled out <strong>Canva Code 2.0</strong>, turning prompts into full web apps with granular UI element editing without total code regeneration, operating 75% faster across 6M+ creations <sup><a href="#ref-10">[10]</a></sup>.</p>
+        <p class="card-body">Perplexity introduced <strong>Comet</strong>, a Chromium-based AI browser for Max subscribers featuring native page summarization and cross-tab execution.<br><br>
+        Canva rolled out <strong>Canva Code 2.0</strong>, turning prompts into full web apps with granular UI element editing without total code regeneration, operating 75% faster across 6M+ creations.</p>
         <div class="chips-row">
           <span class="chip">Comet Browser</span>
           <span class="chip">Canva Code 2.0</span>
@@ -612,8 +588,8 @@ footer {
       <article class="card">
         <div class="card-label">Pinterest &amp; Snapchat · July 2026</div>
         <h3 class="card-title">4.3 Social Commerce AI</h3>
-        <p class="card-body">Pinterest released <strong>Model Context Protocol (MCP)</strong>, connecting campaign analytics directly to third-party AI copilots alongside <strong>Performance+</strong> real-time dynamic ad variant selection <sup><a href="#ref-10">[10]</a></sup>.<br><br>
-        Snapchat launched an end-to-end AI advertising suite automating setup, creative development, and conversational commerce <sup><a href="#ref-10">[10]</a></sup>.</p>
+        <p class="card-body">Pinterest released <strong>Model Context Protocol (MCP)</strong>, connecting campaign analytics directly to third-party AI copilots alongside <strong>Performance+</strong> real-time dynamic ad variant selection.<br><br>
+        Snapchat launched an end-to-end AI advertising suite automating setup, creative development, and conversational commerce.</p>
         <div class="chips-row">
           <span class="chip">Pinterest MCP</span>
           <span class="chip">Snapchat AI Ad Suite</span>
@@ -637,8 +613,8 @@ footer {
 
     <div class="wide-card">
       <h3 class="wide-card-title">5.1 NVIDIA GB300 NVL72 &amp; Thermodynamic Realities</h3>
-      <p class="card-body">The deployment of the <strong>NVIDIA GB300 NVL72 rack-scale supercomputer</strong> constituted the most significant hardware event of 2026 <sup><a href="#ref-2">[2]</a></sup>. TrendForce projects the platform will capture <strong>70% to 80% of global AI server rack shipments in 2026</strong> <sup><a href="#ref-13">[13]</a></sup>.</p>
-      <p class="card-body">A single GB300 NVL72 rack integrates 72 Blackwell Ultra B300 GPUs and 36 Grace CPUs, connected via 5th-gen NVLink to deliver <strong>130 TB/s intra-rack bandwidth</strong> <sup><a href="#ref-2">[2]</a></sup>. Pooling 37 TB of HBM3e memory, it achieves 1,440 PFLOPS of FP4 performance <sup><a href="#ref-2">[2]</a></sup>. However, requiring <strong>120 to 140 kW per rack</strong> (vs traditional 10–20 kW air cooling), the GB300 mandates direct-to-chip liquid cooling and purpose-built "AI Factories" <sup><a href="#ref-2">[2]</a></sup>. NVIDIA released "Mission Control" software for full-stack orchestration <sup><a href="#ref-14">[14]</a></sup>.</p>
+      <p class="card-body">The deployment of the <strong>NVIDIA GB300 NVL72 rack-scale supercomputer</strong> constituted the most significant hardware event of 2026. TrendForce projects the platform will capture <strong>70% to 80% of global AI server rack shipments in 2026</strong>.</p>
+      <p class="card-body">A single GB300 NVL72 rack integrates 72 Blackwell Ultra B300 GPUs and 36 Grace CPUs, connected via 5th-gen NVLink to deliver <strong>130 TB/s intra-rack bandwidth</strong>. Pooling 37 TB of HBM3e memory, it achieves 1,440 PFLOPS of FP4 performance. However, requiring <strong>120 to 140 kW per rack</strong> (vs traditional 10–20 kW air cooling), the GB300 mandates direct-to-chip liquid cooling and purpose-built "AI Factories". NVIDIA released "Mission Control" software for full-stack orchestration.</p>
       <div class="chips-row">
         <span class="chip red">140 kW Per Rack</span>
         <span class="chip red">Direct Liquid Cooling</span>
@@ -651,8 +627,8 @@ footer {
       <article class="card">
         <div class="card-label">Microsoft Azure · July 2026</div>
         <h3 class="card-title">5.2 Azure's GB300 Production Cluster</h3>
-        <p class="card-body">Microsoft Azure unveiled the world's first production supercomputing cluster featuring <strong>4,600+ NVIDIA GB300 NVL72 GPUs</strong> connected via Quantum-X800 InfiniBand with NVIDIA SHARP in-network mathematical computation <sup><a href="#ref-3">[3]</a>, <a href="#ref-11">[11]</a></sup>.<br><br>
-        Engineered for OpenAI's multi-trillion parameter models, Azure estimates the infrastructure compresses multi-month training runs down to weeks <sup><a href="#ref-3">[3]</a></sup>.</p>
+        <p class="card-body">Microsoft Azure unveiled the world's first production supercomputing cluster featuring <strong>4,600+ NVIDIA GB300 NVL72 GPUs</strong> connected via Quantum-X800 InfiniBand with NVIDIA SHARP in-network mathematical computation.<br><br>
+        Engineered for OpenAI's multi-trillion parameter models, Azure estimates the infrastructure compresses multi-month training runs down to weeks.</p>
         <div class="chips-row">
           <span class="chip">4600+ Blackwell GPUs</span>
           <span class="chip">Quantum-X800</span>
@@ -663,8 +639,8 @@ footer {
       <article class="card">
         <div class="card-label">Sovereign Cloud &amp; India · July 2026</div>
         <h3 class="card-title">5.3 Emerging Market Infrastructure</h3>
-        <p class="card-body">In India, <strong>E2E Networks</strong> reported a <strong>334.3% YoY revenue surge</strong> in Q1FY27 after deploying 38,000+ GPUs, with clients committing to 1-to-3 year contracts <sup><a href="#ref-16">[16]</a></sup>. <strong>Netweb Technologies</strong> reported a 172.1% YoY revenue jump, with 62%+ from AI systems (liquid cooling &amp; power distribution) <sup><a href="#ref-16">[16]</a></sup>.<br><br>
-        IBM partnered with Yotta to launch the <strong>IBM Sovereign Core</strong> on Shakti Cloud, offering air-gapped, locally hosted sovereign compute <sup><a href="#ref-2">[2]</a></sup>.</p>
+        <p class="card-body">In India, <strong>E2E Networks</strong> reported a <strong>334.3% YoY revenue surge</strong> in Q1FY27 after deploying 38,000+ GPUs, with clients committing to 1-to-3 year contracts. <strong>Netweb Technologies</strong> reported a 172.1% YoY revenue jump, with 62%+ from AI systems (liquid cooling &amp; power distribution).<br><br>
+        IBM partnered with Yotta to launch the <strong>IBM Sovereign Core</strong> on Shakti Cloud, offering air-gapped, locally hosted sovereign compute.</p>
         <div class="chips-row">
           <span class="chip">E2E +334% YoY</span>
           <span class="chip">Netweb +172% YoY</span>
@@ -690,14 +666,14 @@ footer {
     <!-- 6.1 EU -->
     <div class="wide-card">
       <h3 class="wide-card-title">6.1 EU Digital Omnibus &amp; The "August 2026 Transparency Trap"</h3>
-      <p class="card-body">On June 16, 2026, the European Parliament approved the <strong>Digital Omnibus on AI</strong>, pushing compliance deadlines for Standalone High-Risk systems (Annex III) to December 2, 2027 <sup><a href="#ref-4">[4]</a></sup>. However, this delay created a corporate compliance blind spot known as the <strong>"August 2026 Transparency Trap"</strong> <sup><a href="#ref-4">[4]</a></sup>.</p>
-      <p class="card-body">Core user-transparency mandates under <strong>Article 50 remained strictly effective for August 2, 2026</strong> <sup><a href="#ref-4">[4]</a>, <a href="#ref-18">[18]</a></sup>. Any enterprise operating customer-facing chatbots or synthetic media must explicitly notify users, embed machine-readable C2PA watermarks, and adhere to a strict ban on non-consensual sexual content under pain of global turnover fines <sup><a href="#ref-4">[4]</a>, <a href="#ref-17">[17]</a></sup>. The EU AI Office added 38 staff in Brussels alongside a Whistleblower Tool and ENISA cyber sandboxes <sup><a href="#ref-4">[4]</a>, <a href="#ref-19">[19]</a></sup>.</p>
+      <p class="card-body">On June 16, 2026, the European Parliament approved the <strong>Digital Omnibus on AI</strong>, pushing compliance deadlines for Standalone High-Risk systems (Annex III) to December 2, 2027. However, this delay created a corporate compliance blind spot known as the <strong>"August 2026 Transparency Trap"</strong>.</p>
+      <p class="card-body">Core user-transparency mandates under <strong>Article 50 remained strictly effective for August 2, 2026</strong>. Any enterprise operating customer-facing chatbots or synthetic media must explicitly notify users, embed machine-readable C2PA watermarks, and adhere to a strict ban on non-consensual sexual content under pain of global turnover fines. The EU AI Office added 38 staff in Brussels alongside a Whistleblower Tool and ENISA cyber sandboxes.</p>
     </div>
 
     <!-- 6.3 IndiaAI Mission Table -->
     <div class="wide-card">
       <h3 class="wide-card-title">6.3 India's Sovereign AI Ecosystem &amp; IndiaAI Mission</h3>
-      <p class="card-body">In stark contrast to the EU's penalty framework, India's ₹10,371 crore <strong>IndiaAI Mission</strong> advanced capacity building <sup><a href="#ref-6">[6]</a></sup>. The Cabinet Secretariat identified 762 AI use cases across 62 government ministries <sup><a href="#ref-21">[21]</a></sup>. Infrastructure approvals reached major milestones <sup><a href="#ref-21">[21]</a>, <a href="#ref-23">[23]</a></sup>:</p>
+      <p class="card-body">In stark contrast to the EU's penalty framework, India's ₹10,371 crore <strong>IndiaAI Mission</strong> advanced capacity building. The Cabinet Secretariat identified 762 AI use cases across 62 government ministries. Infrastructure approvals reached major milestones:</p>
 
       <div class="table-wrap">
         <table class="editorial-table">
@@ -714,18 +690,18 @@ footer {
               <td>AI Centres of Excellence (AI-CoEs)</td>
               <td>58</td>
               <td>Regional hubs for advanced research, innovation, and direct industry collaboration.</td>
-              <td>2 allocated to Tamil Nadu <sup><a href="#ref-21">[21]</a></sup></td>
+              <td>2 allocated to Tamil Nadu</td>
             </tr>
             <tr>
               <td>Data &amp; AI Labs</td>
               <td>543</td>
               <td>Established in Tier-2 and Tier-3 city ITIs and polytechnics for applied data science training.</td>
-              <td>18 allocated to Tamil Nadu <sup><a href="#ref-21">[21]</a></sup></td>
+              <td>18 allocated to Tamil Nadu</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p class="card-body">On July 31, 2026, the <strong>Ministry of Ayush signed an MoU</strong> to integrate traditional Indian medicine datasets (Ayurveda, Yoga, Unani, Siddha, Homoeopathy) onto the AIKosh platform <sup><a href="#ref-25">[25]</a></sup>. The mission also funded 13 responsible AI projects, supported 20 sovereign model proposals (including Sarvam AI's 105B model and BharatGen), and awarded 686 fellowships <sup><a href="#ref-6">[6]</a></sup>. Meanwhile, Indian VC funding dropped 67% MoM to $662.2M, shifting capital toward defensible application layers <sup><a href="#ref-26">[26]</a></sup>.</p>
+      <p class="card-body">On July 31, 2026, the <strong>Ministry of Ayush signed an MoU</strong> to integrate traditional Indian medicine datasets (Ayurveda, Yoga, Unani, Siddha, Homoeopathy) onto the AIKosh platform. The mission also funded 13 responsible AI projects, supported 20 sovereign model proposals (including Sarvam AI's 105B model and BharatGen), and awarded 686 fellowships. Meanwhile, Indian VC funding dropped 67% MoM to $662.2M, shifting capital toward defensible application layers.</p>
     </div>
   </div>
 </section>
@@ -746,8 +722,8 @@ footer {
       <article class="card">
         <div class="card-label">Architecture · July 2026 arXiv</div>
         <h3 class="card-title">7.1 MHAR &amp; Divergence Decoding</h3>
-        <p class="card-body"><strong>Multi-Head Attention Residuals (MHAR)</strong> reshapes routing queries into 4–8 per-subspace heads, resolving attention residual subspace disagreement without parameter bloat <sup><a href="#ref-29">[29]</a></sup>.<br><br>
-        <strong>Divergence Decoding</strong> replaces standard speculative decoding with adaptive token routing based on Jensen-Shannon divergence between models <sup><a href="#ref-29">[29]</a></sup>.</p>
+        <p class="card-body"><strong>Multi-Head Attention Residuals (MHAR)</strong> reshapes routing queries into 4–8 per-subspace heads, resolving attention residual subspace disagreement without parameter bloat.<br><br>
+        <strong>Divergence Decoding</strong> replaces standard speculative decoding with adaptive token routing based on Jensen-Shannon divergence between models.</p>
         <div class="chips-row">
           <span class="chip">MHAR Architecture</span>
           <span class="chip">Divergence Decoding</span>
@@ -757,8 +733,8 @@ footer {
       <article class="card">
         <div class="card-label">Safety &amp; Interpretability</div>
         <h3 class="card-title">7.2 MolSafeEval &amp; Manifestation Protocol</h3>
-        <p class="card-body"><strong>MolSafeEval</strong> established a dedicated benchmark to detect chemical toxicity and illicit dual-use hazards in AI-generated molecules <sup><a href="#ref-27">[27]</a></sup>.<br><br>
-        Research on the <strong>Manifestation Unit Protocol</strong> advanced mechanistic interpretability by mathematically mapping concept representations within deep neural network weights <sup><a href="#ref-27">[27]</a></sup>.</p>
+        <p class="card-body"><strong>MolSafeEval</strong> established a dedicated benchmark to detect chemical toxicity and illicit dual-use hazards in AI-generated molecules.<br><br>
+        Research on the <strong>Manifestation Unit Protocol</strong> advanced mechanistic interpretability by mathematically mapping concept representations within deep neural network weights.</p>
         <div class="chips-row">
           <span class="chip">MolSafeEval</span>
           <span class="chip">Interpretability</span>
@@ -768,8 +744,8 @@ footer {
       <article class="card">
         <div class="card-label">Finance &amp; Healthcare</div>
         <h3 class="card-title">7.3 FinanceHarness &amp; Timesynth</h3>
-        <p class="card-body"><strong>FinanceHarness</strong> introduced a point-in-time benchmark preventing future-information temporal leakage in financial AI backtesting <sup><a href="#ref-29">[29]</a></sup>.<br><br>
-        <strong>Timesynth</strong> delivered temporal fidelity frameworks for health signal digital twins, alongside EVOTS for time-series forecasting across clinical layouts <sup><a href="#ref-27">[27]</a></sup>.</p>
+        <p class="card-body"><strong>FinanceHarness</strong> introduced a point-in-time benchmark preventing future-information temporal leakage in financial AI backtesting.<br><br>
+        <strong>Timesynth</strong> delivered temporal fidelity frameworks for health signal digital twins, alongside EVOTS for time-series forecasting across clinical layouts.</p>
         <div class="chips-row">
           <span class="chip">FinanceHarness</span>
           <span class="chip">Timesynth Digital Twins</span>
@@ -793,22 +769,22 @@ footer {
 
     <div class="takeaway-card" data-num="01">
       <h3 style="font-size:1.6rem; margin-bottom:15px;">The End of Monolithic Model Hegemony</h3>
-      <p>Enterprises have permanently abandoned single-model architectures in favor of tiered capability stacks. Top-tier cognitive reasoning (the hardest 10% of tasks) is reserved for Claude Opus 5 or GPT-5.6 Sol, while the vast majority of operational workflows are routed through hyper-efficient workhorses like Gemini 3.6 Flash, GPT-5.6 Luna, or Grok 4.5 <sup><a href="#ref-1">[1]</a></sup>. Furthermore, trillion-parameter open models like Kimi K3 prove that baseline intelligence is fully commoditized <sup><a href="#ref-1">[1]</a></sup>.</p>
+      <p>Enterprises have permanently abandoned single-model architectures in favor of tiered capability stacks. Top-tier cognitive reasoning (the hardest 10% of tasks) is reserved for Claude Opus 5 or GPT-5.6 Sol, while the vast majority of operational workflows are routed through hyper-efficient workhorses like Gemini 3.6 Flash, GPT-5.6 Luna, or Grok 4.5. Furthermore, trillion-parameter open models like Kimi K3 prove that baseline intelligence is fully commoditized.</p>
     </div>
 
     <div class="takeaway-card" data-num="02">
       <h3 style="font-size:1.6rem; margin-bottom:15px;">Physical Thermodynamics as the Primary Bottleneck</h3>
-      <p>The scaling bottleneck has officially shifted from algorithmic engineering to data center thermal plumbing and power distribution. Deploying 140 kW liquid-cooled racks like the NVIDIA GB300 NVL72 means AI leadership is now inextricably tied to commercial real estate, electrical grid access, and high-density liquid cooling infrastructure <sup><a href="#ref-2">[2]</a></sup>.</p>
+      <p>The scaling bottleneck has officially shifted from algorithmic engineering to data center thermal plumbing and power distribution. Deploying 140 kW liquid-cooled racks like the NVIDIA GB300 NVL72 means AI leadership is now inextricably tied to commercial real estate, electrical grid access, and high-density liquid cooling infrastructure.</p>
     </div>
 
     <div class="takeaway-card" data-num="03">
       <h3 style="font-size:1.6rem; margin-bottom:15px;">Regulatory Bifurcation: Enforcement vs Sovereign Buildout</h3>
-      <p>Global AI policy has split into two distinct models. The EU enforces strict, penalty-backed transparency mandates (Article 50) <sup><a href="#ref-4">[4]</a></sup>, while India treats AI as sovereign infrastructure, investing ₹10,371 crore in state-owned compute, 58 CoEs, 543 Data &amp; AI Labs, and indigenous model development <sup><a href="#ref-6">[6]</a>, <a href="#ref-21">[21]</a></sup>.</p>
+      <p>Global AI policy has split into two distinct models. The EU enforces strict, penalty-backed transparency mandates (Article 50), while India treats AI as sovereign infrastructure, investing ₹10,371 crore in state-owned compute, 58 CoEs, 543 Data &amp; AI Labs, and indigenous model development.</p>
     </div>
 
     <div class="takeaway-card" data-num="04">
       <h3 style="font-size:1.6rem; margin-bottom:15px;">Autonomous Agents Replace Traditional Software UI</h3>
-      <p>From ChatGPT Work to Perplexity Comet and Canva Code 2.0, the traditional application interface is being subsumed by autonomous agents capable of multi-hour task execution, native cross-app web parsing, and direct code generation <sup><a href="#ref-10">[10]</a></sup>.</p>
+      <p>From ChatGPT Work to Perplexity Comet and Canva Code 2.0, the traditional application interface is being subsumed by autonomous agents capable of multi-hour task execution, native cross-app web parsing, and direct code generation.</p>
     </div>
 
     <div class="note-box">
@@ -882,13 +858,6 @@ footer {
 </footer>
 
 <script>
-// Toggle nav collapse on scroll
-window.addEventListener('scroll', () => {
-  const nav = document.querySelector('nav');
-  if (nav) {
-    nav.classList.toggle('scrolled', window.scrollY > 40);
-  }
-}, { passive: true });
 
 // Benchmark fill animation via IntersectionObserver
 const observer = new IntersectionObserver((entries) => {
