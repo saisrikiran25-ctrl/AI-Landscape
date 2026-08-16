@@ -142,6 +142,73 @@
       color: var(--wsj-gray-med);
       letter-spacing: 0.05em;
     }
+    /* NAV */
+    .site-nav {
+      width: 100%;
+      border-bottom: 2px solid var(--wsj-black);
+      background: var(--white);
+      padding: 14px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+    .site-nav a {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--wsj-gray-med);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .site-nav a:hover { color: var(--wsj-black); }
+    .site-nav a.site-nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      color: var(--wsj-black);
+    }
+    /* AUTHOR STRIP */
+    .author-strip {
+      max-width: 700px;
+      margin-top: 16px;
+      padding: 18px 24px;
+      background: var(--white);
+      border: 1px solid var(--wsj-border);
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      text-align: left;
+    }
+    .author-strip-avatar {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      background: var(--wsj-black);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 900;
+      color: var(--white);
+    }
+    .author-strip-text {
+      font-family: var(--font-serif);
+      font-size: 0.85rem;
+      color: var(--wsj-gray-med);
+      line-height: 1.5;
+    }
+    .author-strip-text strong { color: var(--wsj-black); }
+    .author-strip-text a { color: var(--wsj-blue); text-decoration: none; font-weight: 700; }
+    body { padding-top: 56px; }
     @media (max-width: 600px) {
       .landing-logo { font-size: 2rem; }
       .report-link .title { font-size: 1.2rem; }
@@ -149,6 +216,12 @@
   </style>
 </head>
 <body>
+
+  <nav class="site-nav">
+    <a href="index.html" class="site-nav-logo">THE AI LANDSCAPE</a>
+    <a href="index.html">Archive</a>
+    <a href="about.html">About</a>
+  </nav>
 
   <div class="landing">
     <div class="landing-logo">THE AI LANDSCAPE</div>
@@ -177,7 +250,15 @@
       </a>
     </div>
 
-    <p class="footer-note">© 2026 MONTHLY REPORT. SAI SRIKIRAN J.</p>
+    <div class="author-strip">
+      <div class="author-strip-avatar">SS</div>
+      <div class="author-strip-text">
+        Written by <strong>Sai Srikiran J.</strong> — independent AI analyst tracking every model release, infrastructure shift, and regulatory development across the global AI landscape.<br>
+        <a href="about.html">About the author →</a>
+      </div>
+    </div>
+
+    <p class="footer-note">© 2026 MONTHLY REPORT. SAI SRIKIRAN J. · <a href="about.html" style="color:var(--wsj-gray-med);">About</a></p>
   </div>
 
 </body>
