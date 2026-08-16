@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://saisrikiran25-ctrl.github.io/AI-Landscape/sitemap.xml
