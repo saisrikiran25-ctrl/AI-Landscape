@@ -309,7 +309,7 @@ footer {
 
 <nav>
   <div class="nav-inner">
-    <a href="#" class="nav-logo">THE AI LANDSCAPE</a>
+    <a href="index.html" class="nav-logo">THE AI LANDSCAPE</a>
     <ul class="nav-links">
       <li><a href="#students">Students</a></li>
       <li><a href="#engineering">Engineering</a></li>
@@ -321,6 +321,7 @@ footer {
       <li><a href="#design">Design</a></li>
       <li><a href="#tools">Tool Stack</a></li>
       <li><a href="AI_landscape_may2026.html" style="color:var(--wsj-blue); font-weight:800; border:1px solid var(--wsj-blue); padding:3px 10px;">May 2026 Update →</a></li>
+      <li><a href="about.html" style="color:var(--wsj-blue);">About</a></li>
     </ul>
   </div>
 </nav>
@@ -2255,6 +2256,57 @@ footer {
 
       </div><!-- end grid -->
     </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- MORE REPORTS                                                 -->
+<!-- ============================================================ -->
+<style>
+.more-reports-section { background: var(--cream); border-top: 2px solid var(--wsj-black); padding: 60px 0; }
+.more-reports-header { margin-bottom: 36px; }
+.more-reports-header .section-tag-mr { font-family: var(--font-sans); font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--wsj-blue); display: block; margin-bottom: 8px; }
+.more-reports-header h2 { font-family: var(--font-display); font-size: 1.8rem; letter-spacing: -0.02em; }
+.mr-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.mr-card { background: var(--white); border: 1px solid var(--wsj-border); padding: 26px 24px; text-decoration: none; display: block; transition: border-color 0.2s, transform 0.15s; }
+.mr-card:hover { border-color: var(--wsj-black); transform: translateY(-2px); }
+.mr-card .mr-tag { font-family: var(--font-sans); font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--wsj-blue); margin-bottom: 8px; }
+.mr-card .mr-title { font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; color: var(--wsj-black); margin-bottom: 6px; line-height: 1.25; }
+.mr-card .mr-desc { font-family: var(--font-serif); font-size: 0.82rem; color: var(--wsj-gray-med); line-height: 1.5; }
+.mr-about { margin-top: 30px; padding: 20px 24px; background: var(--wsj-black); color: var(--white); display: flex; justify-content: space-between; align-items: center; text-decoration: none; gap: 20px; transition: opacity 0.2s; }
+.mr-about:hover { opacity: 0.88; }
+.mr-about-text { font-family: var(--font-serif); font-size: 0.9rem; color: #ccc; }
+.mr-about-text strong { color: var(--white); display: block; font-family: var(--font-display); font-size: 1rem; margin-bottom: 3px; }
+.mr-about-cta { font-family: var(--font-sans); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--white); border: 1px solid #666; padding: 8px 16px; white-space: nowrap; }
+@media(max-width:700px){.mr-grid{grid-template-columns:1fr;}}
+</style>
+<section class="more-reports-section">
+  <div class="container">
+    <div class="more-reports-header">
+      <span class="section-tag-mr">The AI Landscape Archive</span>
+      <h2>More Reports</h2>
+    </div>
+    <div class="mr-grid">
+      <a href="AI_landscape_july2026.html" class="mr-card">
+        <div class="mr-tag">July 2026 Report — Latest</div>
+        <div class="mr-title">Optimization of the Denominator &amp; Open-Weight Shockwave</div>
+        <div class="mr-desc">Claude Opus 5, GPT-5.6 GA, Kimi K3 2.8T open weights, NVIDIA GB300 NVL72, EU AI Act Article 50.</div>
+      </a>
+      <a href="AI_landscape_june2026.html" class="mr-card">
+        <div class="mr-tag">June 2026 Report</div>
+        <div class="mr-title">Law, Physics, and the Reckoning</div>
+        <div class="mr-desc">Export controls paralyzed frontier models, GPT-5.6 previewed, open-weight models crossed the agentic Rubicon.</div>
+      </a>
+      <a href="AI_landscape_may2026.html" class="mr-card">
+        <div class="mr-tag">May 2026 Report</div>
+        <div class="mr-title">The Month Agents Went Live</div>
+        <div class="mr-desc">AI agents moved to GA, frontier defaults reshuffled, safety infrastructure hardened across the industry.</div>
+      </a>
+    </div>
+    <a href="about.html" class="mr-about">
+      <div class="mr-about-text"><strong>Sai Srikiran J.</strong> Independent AI analyst — monthly editorial reports tracking every model release, infrastructure shift, and regulatory development.</div>
+      <div class="mr-about-cta">About the Author →</div>
+    </a>
   </div>
 </section>
 
