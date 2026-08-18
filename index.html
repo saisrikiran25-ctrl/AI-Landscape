@@ -147,15 +147,23 @@
       width: 100%;
       border-bottom: 2px solid var(--wsj-black);
       background: var(--white);
-      padding: 14px 20px;
+      padding: 14px 24px;
       display: flex;
-      justify-content: center;
-      gap: 28px;
-      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
       position: fixed;
       top: 0;
       left: 0;
       z-index: 100;
+    }
+    .site-nav-left {
+      flex: 1;
+    }
+    .site-nav-links {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      gap: 28px;
     }
     .site-nav a {
       font-family: var(--font-sans);
@@ -174,6 +182,8 @@
       font-weight: 900;
       letter-spacing: -0.03em;
       color: var(--wsj-black);
+      flex-shrink: 0;
+      text-align: center;
     }
     /* AUTHOR STRIP */
     .author-strip {
@@ -212,15 +222,34 @@
     @media (max-width: 600px) {
       .landing-logo { font-size: 2rem; }
       .report-link .title { font-size: 1.2rem; }
+      .site-nav {
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px 20px;
+      }
+      .site-nav-left {
+        display: none;
+      }
+      .site-nav-links {
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+      }
+      body {
+        padding-top: 76px;
+      }
     }
   </style>
 </head>
 <body>
 
   <nav class="site-nav">
+    <div class="site-nav-left"></div>
     <a href="index.html" class="site-nav-logo">THE AI LANDSCAPE</a>
-    <a href="index.html">Archive</a>
-    <a href="about.html">About</a>
+    <div class="site-nav-links">
+      <a href="index.html">Archive</a>
+      <a href="about.html">About</a>
+    </div>
   </nav>
 
   <div class="landing">
