@@ -903,6 +903,9 @@ footer {
 .mr-about-text strong { color: var(--white); display: block; font-family: var(--font-display); font-size: 1rem; margin-bottom: 3px; }
 .mr-about-cta { font-family: var(--font-sans); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--white); border: 1px solid #666; padding: 8px 16px; white-space: nowrap; }
 @media(max-width:700px){.mr-grid{grid-template-columns:1fr;}}
+.mr-grid.five { grid-template-columns: repeat(5, 1fr); }
+@media(max-width:1000px){.mr-grid.five{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:700px){.mr-grid.five{grid-template-columns:1fr;}}
 </style>
 <section class="more-reports-section">
   <div class="container">
@@ -910,9 +913,14 @@ footer {
       <span class="section-tag-mr">The AI Landscape Archive</span>
       <h2>More Reports</h2>
     </div>
-    <div class="mr-grid" style="grid-template-columns: repeat(4, 1fr);">
-      <a href="AI_landscape_august2026.html" class="mr-card" style="border-left: 4px solid var(--wsj-red);">
-        <div class="mr-tag" style="color:var(--wsj-red);">August 2026 Report</div>
+    <div class="mr-grid five">
+      <a href="AI_landscape_september2026.html" class="mr-card" style="border-left: 4px solid var(--wsj-red);">
+        <div class="mr-tag" style="color:var(--wsj-red);">September 2026 Report</div>
+        <div class="mr-title">From Assistants to Operational AI Systems</div>
+        <div class="mr-desc">Siri AI, Claude Opus 5.5 (reported), OpenAI Data agent, NVIDIA Open Agent Safety Platform, and the G20 AI consensus.</div>
+      </a>
+      <a href="AI_landscape_august2026.html" class="mr-card">
+        <div class="mr-tag">August 2026 Report</div>
         <div class="mr-title">The Shift to System Deployment</div>
         <div class="mr-desc">EU AI Act Art. 50 takes effect, NVIDIA $500B infra financing, Gemini 3.7 Flash &amp; GPT-5.6 Sol Ultrafast.</div>
       </a>
